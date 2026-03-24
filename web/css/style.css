@@ -43,10 +43,27 @@ img{max-width:100%;height:auto;display:block}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .nav-hamburger span{display:block;width:20px;height:1.5px;background:var(--text);border-radius:1px;transition:all .3s}
 
-.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:var(--bg);padding:100px var(--gutter) 2rem;flex-direction:column;gap:2rem}
+.nav-dropdown{position:relative}
+.nav-dropdown-trigger{cursor:pointer}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:280px;background:var(--bg-card);border:1px solid var(--border-hover);border-radius:var(--radius-sm);padding:.5rem;margin-top:.75rem;box-shadow:0 16px 48px -8px rgba(0,0,0,.6);z-index:100}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-item{display:block;padding:.625rem .75rem;border-radius:8px;transition:background .2s;cursor:pointer}
+.nav-dropdown-item:hover{background:rgba(255,255,255,.05)}
+.nav-dropdown-item--disabled{cursor:default;opacity:.5}
+.nav-dropdown-item--disabled:hover{background:transparent}
+.nav-dropdown-item-name{font-size:.8125rem;font-weight:600;color:var(--text-bright);margin-bottom:.125rem;display:flex;align-items:center;gap:.5rem}
+.nav-dropdown-item-desc{font-size:.6875rem;color:var(--text-muted);font-weight:400}
+
+.beta-pill{display:inline-flex;align-items:center;padding:.125rem .4375rem;background:rgba(168,85,247,.15);color:var(--accent2);font-size:.5625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;border:1px solid rgba(168,85,247,.25);line-height:1.4;vertical-align:middle}
+.beta-pill--lg{font-size:.6875rem;padding:.25rem .625rem;margin-bottom:1.25rem}
+
+.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:var(--bg);padding:100px var(--gutter) 2rem;flex-direction:column;gap:2rem;overflow-y:auto}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1.75rem;font-weight:600;color:var(--text-muted);transition:color .2s;letter-spacing:-.02em}
+.mobile-menu a,.mobile-menu span{font-size:1.75rem;font-weight:600;color:var(--text-muted);transition:color .2s;letter-spacing:-.02em}
 .mobile-menu a:hover{color:var(--text-bright)}
+.mobile-menu-label{font-size:.6875rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);margin-bottom:-1rem}
+.mobile-menu-sub{font-size:1.25rem!important;padding-left:1rem;display:flex;align-items:center;gap:.5rem}
+.mobile-menu-sub--disabled{opacity:.4;cursor:default}
 
 @media(max-width:768px){
   .nav-links{display:none}
@@ -286,6 +303,20 @@ img{max-width:100%;height:auto;display:block}
 .svc-process-desc{font-size:.8125rem;color:var(--text-muted);line-height:1.6}
 @media(max-width:900px){.svc-process-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.svc-process-grid{grid-template-columns:1fr}}
+
+/* ── PRODUCT PAGE ── */
+.product-features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.product-features-grid--3{grid-template-columns:repeat(3,1fr)}
+.product-feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:border-color .3s}
+.product-feature-card:hover{border-color:var(--border-hover)}
+.product-feature-icon{width:40px;height:40px;margin-bottom:1.25rem;color:var(--accent2)}
+.product-feature-icon svg{width:100%;height:100%}
+.product-feature-title{font-size:1rem;font-weight:600;color:var(--text-bright);margin-bottom:.5rem;letter-spacing:-.01em}
+.product-feature-desc{font-size:.8125rem;color:var(--text-muted);line-height:1.6}
+@media(max-width:900px){.product-features-grid,.product-features-grid--3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.product-features-grid,.product-features-grid--3{grid-template-columns:1fr}}
+
+.footer-link-disabled{font-size:.8125rem;color:var(--text-dim);font-weight:400;display:flex;align-items:center;gap:.375rem}
 
 /* ── UTILITY ── */
 .mt-1{margin-top:1rem}.mt-2{margin-top:2rem}.mt-4{margin-top:4rem}.mt-6{margin-top:clamp(3rem,6vh,4rem)}
