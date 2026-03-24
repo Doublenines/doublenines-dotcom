@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <path d="M40 8C22.3 8 8 22.3 8 40s14.3 32 32 32 32-14.3 32-32S57.7 8 40 8zm0 52c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z" fill="white"/>
+  <path d="M40 24c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm0 24c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" fill="white"/>
+  <text x="82" y="50" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="600" fill="white">OpenAI</text>
+</svg>
