@@ -142,10 +142,9 @@ img{max-width:100%;height:auto;display:block}
 /* ── CLIENTS BAR ── */
 .clients-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(3rem,6vh,5rem) 0}
 .clients-bar-label{font-size:.8125rem;color:var(--text-muted);text-align:center;margin-bottom:2.5rem;font-weight:400}
-.clients-logo-row{display:flex;justify-content:center;align-items:center;gap:clamp(2.5rem,6vw,5rem);flex-wrap:wrap}
-.client-logo{height:28px;width:auto;opacity:.5;filter:brightness(0) invert(1);transition:opacity .2s}
+.clients-logo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:900px;margin:0 auto}
+.client-logo{height:28px;width:auto;opacity:.45;filter:brightness(0) invert(1);transition:opacity .25s;justify-self:center;padding:1.25rem 1rem}
 .client-logo:hover{opacity:.8}
-@media(max-width:640px){.clients-logo-row{gap:2rem}.client-logo{height:22px}}
 
 /* ── SECTIONS ── */
 .section{padding-top:clamp(5rem,10vh,8rem);padding-bottom:clamp(5rem,10vh,8rem)}
@@ -398,14 +397,14 @@ img{max-width:100%;height:auto;display:block}
   .stat-big{font-size:clamp(3rem,10vw,5rem)}
   .belief-text{font-size:clamp(1.1rem,3vw,1.5rem)}
   .cs-hero h1{font-size:clamp(1.75rem,5vw,2.5rem)}
-  .clients-logo-row{gap:1.5rem}
+  .clients-logo-row{grid-template-columns:repeat(3,1fr)}
   .client-logo{height:22px}
   .mobile-menu{padding:80px var(--gutter) 2rem}
 }
 
 /* ── RESPONSIVE: SMALL TABLET / LARGE PHONE (max-width: 640px) ── */
 @media(max-width:640px){
-  .clients-logo-row{gap:1.25rem;justify-content:center}
+  .clients-logo-row{grid-template-columns:repeat(3,1fr)}
   .client-logo{height:20px}
   .clients-bar{padding:clamp(2rem,4vh,3rem) 0}
   .clients-bar-label{font-size:.75rem;margin-bottom:1.5rem}
@@ -441,8 +440,8 @@ img{max-width:100%;height:auto;display:block}
   .svc-detail-card--wide .svc-detail-content{padding:1.5rem}
   .svc-process-step{padding:1.5rem 1.25rem}
   .product-feature-card{padding:1.5rem}
-  .clients-logo-row{gap:1rem}
-  .client-logo{height:18px}
+  .clients-logo-row{grid-template-columns:repeat(2,1fr)}
+  .client-logo{height:18px;padding:.875rem .5rem}
   .partner-logo-card{padding:1.5rem 1rem}
   .partner-logo-card img{height:24px}
   .mobile-menu{padding:72px var(--gutter) 2rem}
