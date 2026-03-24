@@ -34,7 +34,7 @@ img{max-width:100%;height:auto;display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter)}
 .nav-logo{display:flex;align-items:center}
-.nav-logo img{height:22px;width:auto}
+.nav-logo img{height:44px;width:auto}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-size:.8125rem;font-weight:500;color:var(--text-muted);transition:color .2s}
 .nav-links a:hover{color:var(--text-bright)}
