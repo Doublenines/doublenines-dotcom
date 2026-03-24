@@ -62,15 +62,37 @@ img{max-width:100%;height:auto;display:block}
 .hero-cta{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:360px}
 .hero-logo-mark{width:clamp(80px,30%,120px);position:relative;z-index:1;opacity:.9}
-.hero-blobs{position:absolute;inset:0;overflow:hidden}
-.hero-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
-.hero-blob-1{width:320px;height:320px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:10%;right:0;opacity:.35}
-.hero-blob-2{width:260px;height:260px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:5%;right:20%;opacity:.3}
-.hero-blob-3{width:200px;height:200px;background:radial-gradient(circle,#3b82f6 0%,transparent 70%);top:30%;left:10%;opacity:.2}
 @media(max-width:768px){
   .hero-grid{grid-template-columns:1fr}
   .hero-visual{min-height:240px}
 }
+
+/* ── ABSTRACT MESH (shared) ── */
+.abstract-mesh{position:relative;overflow:hidden}
+.abstract-mesh--hero{position:absolute;inset:0}
+.abstract-mesh--card{height:240px}
+.mesh-orb{position:absolute;border-radius:50%;filter:blur(60px)}
+.mesh-ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.06)}
+
+.abstract-mesh--hero .mesh-orb-1{width:280px;height:280px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:5%;right:5%;opacity:.35;animation:meshFloat 8s ease-in-out infinite}
+.abstract-mesh--hero .mesh-orb-2{width:220px;height:220px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:10%;right:25%;opacity:.3;animation:meshFloat 10s ease-in-out infinite reverse}
+.abstract-mesh--hero .mesh-orb-3{width:180px;height:180px;background:radial-gradient(circle,#3b82f6 0%,transparent 70%);top:35%;left:10%;opacity:.2;animation:meshFloat 12s ease-in-out infinite}
+.abstract-mesh--hero .mesh-ring-1{width:300px;height:300px;top:10%;right:0;animation:meshSpin 20s linear infinite}
+.abstract-mesh--hero .mesh-ring-2{width:200px;height:200px;bottom:15%;right:30%;animation:meshSpin 15s linear infinite reverse}
+
+.abstract-mesh--card .mesh-orb-1{width:200px;height:200px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:-20%;right:-10%;opacity:.3;animation:meshFloat 8s ease-in-out infinite}
+.abstract-mesh--card .mesh-orb-2{width:160px;height:160px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:-10%;left:10%;opacity:.25;animation:meshFloat 10s ease-in-out infinite reverse}
+
+.abstract-mesh--alt .mesh-orb-1{background:radial-gradient(circle,var(--accent2) 0%,transparent 70%)!important}
+.abstract-mesh--alt .mesh-orb-2{background:radial-gradient(circle,#3b82f6 0%,transparent 70%)!important}
+
+.mesh-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);width:120%}
+.mesh-line-1{top:30%;left:-10%;transform:rotate(-5deg)}
+.mesh-line-2{top:55%;left:-10%;transform:rotate(3deg)}
+.mesh-line-3{top:75%;left:-10%;transform:rotate(-2deg)}
+
+@keyframes meshFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-15px)}}
+@keyframes meshSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
 /* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;gap:.375rem;font-size:.8125rem;font-weight:500;cursor:pointer;border:none;letter-spacing:.005em;font-family:var(--font);transition:all .2s}
