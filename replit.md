@@ -15,6 +15,7 @@ server.js                    # Static file server (port 5000)
 web/
   css/style.css              # Shared stylesheet (all pages)
   index.html                 # Homepage
+  services.html              # Services page (Scale.com-inspired layout)
   work.html                  # Work/portfolio page
   404.html                   # 404 error page
   privacy-policy.html        # Privacy policy
