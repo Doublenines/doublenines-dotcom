@@ -55,10 +55,9 @@ img{max-width:100%;height:auto;display:block}
 
 /* ── HERO ── */
 .hero{padding:clamp(8rem,16vh,13rem) 0 clamp(4rem,8vh,6rem)}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:2rem;align-items:center}
 .hero-content{text-align:left;max-width:640px}
-.hero h1{font-size:clamp(2.75rem,5.5vw,4.5rem);font-weight:600;line-height:1.1;letter-spacing:-.04em;margin-bottom:1.5rem;color:var(--text-bright)}
-.hero h1 .muted{color:var(--text-dim)}
+.hero h1{font-size:clamp(2.25rem,4.5vw,3.5rem);font-weight:600;line-height:1.15;letter-spacing:-.035em;margin-bottom:1.5rem;color:var(--text-bright)}
 .hero p{font-size:1rem;color:var(--text-muted);max-width:440px;line-height:1.7;margin-bottom:2rem;font-weight:400}
 .hero-cta{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:360px}
