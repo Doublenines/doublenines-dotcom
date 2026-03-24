@@ -22,6 +22,7 @@
 }
 
 html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+p,h1,h2,h3,.section-desc,.section-desc-center,.hero p,.solution-card-desc,.belief-text,.work-card-desc,.cs-content p,.cs-hero p{text-wrap:pretty}
 body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
