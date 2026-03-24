@@ -45,7 +45,8 @@ img{max-width:100%;height:auto;display:block}
 
 .nav-dropdown{position:relative}
 .nav-dropdown-trigger{cursor:pointer}
-.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:280px;background:var(--bg-card);border:1px solid var(--border-hover);border-radius:var(--radius-sm);padding:.5rem;margin-top:.75rem;box-shadow:0 16px 48px -8px rgba(0,0,0,.6);z-index:100}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:280px;background:var(--bg-card);border:1px solid var(--border-hover);border-radius:var(--radius-sm);padding:.5rem;padding-top:calc(.5rem + .75rem);margin-top:0;box-shadow:0 16px 48px -8px rgba(0,0,0,.6);z-index:100}
+.nav-dropdown-menu::before{content:'';position:absolute;top:-.5rem;left:0;right:0;height:calc(.75rem + .5rem);background:transparent}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
 .nav-dropdown-item{display:block;padding:.625rem .75rem;border-radius:8px;transition:background .2s;cursor:pointer}
 .nav-dropdown-item:hover{background:rgba(255,255,255,.05)}
