@@ -56,7 +56,7 @@ img{max-width:100%;height:auto;display:block}
 .hero{padding:clamp(8rem,16vh,13rem) 0 clamp(4rem,8vh,6rem)}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .hero-content{text-align:left;max-width:600px}
-.hero h1{font-size:clamp(2.25rem,4.5vw,3.5rem);font-weight:600;line-height:1.15;letter-spacing:-.035em;margin-bottom:1.5rem;color:var(--text-bright)}
+.hero h1{font-size:clamp(2.75rem,5.5vw,4.5rem);font-weight:600;line-height:1.1;letter-spacing:-.04em;margin-bottom:1.5rem;color:var(--text-bright)}
 .hero h1 .muted{color:var(--text-dim)}
 .hero p{font-size:1rem;color:var(--text-muted);max-width:440px;line-height:1.7;margin-bottom:2rem;font-weight:400}
 .hero-cta{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
