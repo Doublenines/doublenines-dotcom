@@ -80,16 +80,27 @@ img{max-width:100%;height:auto;display:block}
 .abstract-mesh--hero .mesh-ring-1{width:300px;height:300px;top:10%;right:0;animation:meshSpin 20s linear infinite}
 .abstract-mesh--hero .mesh-ring-2{width:200px;height:200px;bottom:15%;right:30%;animation:meshSpin 15s linear infinite reverse}
 
-.abstract-mesh--card .mesh-orb-1{width:200px;height:200px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:-20%;right:-10%;opacity:.3;animation:meshFloat 8s ease-in-out infinite}
-.abstract-mesh--card .mesh-orb-2{width:160px;height:160px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:-10%;left:10%;opacity:.25;animation:meshFloat 10s ease-in-out infinite reverse}
+/* ── STUDIO CARD ── */
+.abstract-mesh--studio{height:260px;background:linear-gradient(135deg,rgba(248,0,148,.04) 0%,transparent 50%,rgba(168,85,247,.04) 100%)}
+.abstract-mesh--studio .mesh-grid-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px;opacity:.6}
+.abstract-mesh--studio .mesh-orb-a{position:absolute;width:220px;height:220px;background:radial-gradient(circle,var(--accent) 0%,transparent 65%);top:-30%;right:5%;opacity:.4;filter:blur(50px);animation:meshFloat 8s ease-in-out infinite}
+.abstract-mesh--studio .mesh-orb-b{position:absolute;width:180px;height:180px;background:radial-gradient(circle,var(--accent2) 0%,transparent 65%);bottom:-20%;left:15%;opacity:.35;filter:blur(45px);animation:meshFloat 10s ease-in-out infinite reverse}
+.abstract-mesh--studio .mesh-orb-c{position:absolute;width:120px;height:120px;background:radial-gradient(circle,#ec4899 0%,transparent 65%);top:20%;left:40%;opacity:.25;filter:blur(35px);animation:meshFloat 6s ease-in-out infinite}
+.abstract-mesh--studio .mesh-ring-a{position:absolute;width:160px;height:160px;border:1px solid rgba(248,0,148,.15);border-radius:50%;top:15%;right:15%;animation:meshSpin 20s linear infinite}
+.abstract-mesh--studio .mesh-diamond{position:absolute;width:60px;height:60px;border:1px solid rgba(255,255,255,.08);top:40%;left:20%;transform:rotate(45deg);animation:meshFloat 7s ease-in-out infinite reverse}
 
-.abstract-mesh--alt .mesh-orb-1{background:radial-gradient(circle,var(--accent2) 0%,transparent 70%)!important}
-.abstract-mesh--alt .mesh-orb-2{background:radial-gradient(circle,#3b82f6 0%,transparent 70%)!important}
-
-.mesh-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);width:120%}
-.mesh-line-1{top:30%;left:-10%;transform:rotate(-5deg)}
-.mesh-line-2{top:55%;left:-10%;transform:rotate(3deg)}
-.mesh-line-3{top:75%;left:-10%;transform:rotate(-2deg)}
+/* ── ENTERPRISE CARD ── */
+.abstract-mesh--enterprise{height:260px;background:linear-gradient(135deg,rgba(168,85,247,.04) 0%,transparent 50%,rgba(59,130,246,.04) 100%)}
+.abstract-mesh--enterprise .mesh-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px}
+.abstract-mesh--enterprise .mesh-orb-a{position:absolute;width:200px;height:200px;background:radial-gradient(circle,var(--accent2) 0%,transparent 65%);top:-20%;left:10%;opacity:.4;filter:blur(50px);animation:meshFloat 9s ease-in-out infinite}
+.abstract-mesh--enterprise .mesh-orb-b{position:absolute;width:240px;height:240px;background:radial-gradient(circle,#3b82f6 0%,transparent 65%);bottom:-30%;right:0%;opacity:.3;filter:blur(55px);animation:meshFloat 11s ease-in-out infinite reverse}
+.abstract-mesh--enterprise .mesh-orb-c{position:absolute;width:100px;height:100px;background:radial-gradient(circle,#06b6d4 0%,transparent 65%);top:30%;right:30%;opacity:.2;filter:blur(30px);animation:meshFloat 7s ease-in-out infinite}
+.abstract-mesh--enterprise .mesh-arc-a{position:absolute;width:200px;height:200px;border:1px solid rgba(168,85,247,.12);border-radius:50%;top:-20%;right:20%;clip-path:polygon(0 50%,100% 0,100% 100%);animation:meshSpin 25s linear infinite}
+.abstract-mesh--enterprise .mesh-arc-b{position:absolute;width:140px;height:140px;border:1px solid rgba(59,130,246,.1);border-radius:50%;bottom:5%;left:25%;clip-path:polygon(0 0,100% 50%,0 100%);animation:meshSpin 18s linear infinite reverse}
+.abstract-mesh--enterprise .mesh-crosshair{position:absolute;width:40px;height:40px;top:50%;left:55%;transform:translate(-50%,-50%)}
+.abstract-mesh--enterprise .mesh-crosshair::before,.abstract-mesh--enterprise .mesh-crosshair::after{content:'';position:absolute;background:rgba(255,255,255,.08)}
+.abstract-mesh--enterprise .mesh-crosshair::before{width:1px;height:100%;left:50%;top:0}
+.abstract-mesh--enterprise .mesh-crosshair::after{width:100%;height:1px;top:50%;left:0}
 
 @keyframes meshFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-15px)}}
 @keyframes meshSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
