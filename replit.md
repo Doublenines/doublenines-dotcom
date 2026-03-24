@@ -1,13 +1,13 @@
 # Double Nines Website
 
 ## Overview
-Static website for Double Nines (doublenines.co), a digital product design and build studio. Rebuilt as a clean, Scale.com-inspired dark-themed site.
+Static website for Double Nines (doublenines.co), a digital product design and build studio. Rebuilt as a clean, Scale.com-inspired dark-themed site with premium typography and visual effects.
 
 ## Architecture
 - **Server**: Node.js static file server (`server.js`) serving from `./web` on port 5000
 - **Frontend**: Pure HTML/CSS, no frameworks, no build step
-- **Font**: Montserrat (Google Fonts, weights 400-800)
-- **Theme**: Dark (#09090b bg, #f80094 accent pink, #a1a1aa muted text)
+- **Font**: Inter (Google Fonts, weights 400-800)
+- **Theme**: Dark (#050505 bg, #f80094 accent pink, #a855f7 accent purple, #8b8b96 muted text)
 
 ## File Structure
 ```
@@ -37,9 +37,13 @@ web/
 ## Key Design Decisions
 - No Webflow CSS/JS dependencies — completely custom clean code
 - No jQuery — vanilla JS only (minimal, just mobile menu toggle)
-- Scale.com-inspired aesthetic: dark backgrounds, clean typography, gradient accents
-- Responsive: mobile-first breakpoints at 540px, 640px, 768px, 900px
-- Fixed nav with backdrop blur, pill-style CTA buttons, card-based work grid
+- Scale.com-inspired aesthetic: #050505 deep black bg, radial gradient hero glows, tight letter-spacing (-.045em), frosted glass nav
+- Nav: `.nav-cta` glass-style button, `.nav-hamburger` as accessible `<button>`, backdrop-filter blur
+- Buttons: `.btn-primary` (pink glow), `.btn-ghost` (subtle border), `.btn-arrow` suffix
+- Cards: `.work-card` / `.case-card` with hover shadow + subtle image zoom
+- Stats: gradient text (pink-to-purple) via background-clip
+- Responsive: breakpoints at 540px, 640px, 768px, 900px
+- Container max-width: 1320px with fluid gutter clamp(1.25rem, 5vw, 3.5rem)
 
 ## Contact
 - Email: hi@doublenines.co
