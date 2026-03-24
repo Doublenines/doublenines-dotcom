@@ -56,11 +56,11 @@ body {
 }
 /* Get rid of bottom margin on last element in any rich text element */
 .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
-	margin-bottom: 0 !important;
+        margin-bottom: 0 !important;
 }
 /* Prevent all click and hover interaction with an element */
 .pointer-events-off {
-	pointer-events: none;
+        pointer-events: none;
 }
 /* Enables all click and hover interaction with an element */
 .pointer-events-on {
@@ -68,13 +68,13 @@ body {
 }
 /* Create a class of .div-square which maintains a 1:1 dimension of a div */
 .div-square::after {
-	content: "";
-	display: block;
-	padding-bottom: 100%;
+        content: "";
+        display: block;
+        padding-bottom: 100%;
 }
 /* Make sure containers never lose their center alignment */
 .container-medium,.container-small, .container-large {
-	margin-right: auto !important;
+        margin-right: auto !important;
   margin-left: auto !important;
 }
 /* 
@@ -98,17 +98,17 @@ a,
 */
 /* Apply "..." after 3 lines of text */
 .text-style-3lines {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
 }
 /* Apply "..." after 2 lines of text */
 .text-style-2lines {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
 }
 /* Adds inline flex display */
 .display-inlineflex {
@@ -459,7 +459,7 @@ margin: 0rem !important;
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4X4ZQR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--  End Google Tag Manager (noscript)  -->
   <style>
-	body {
+        body {
   /* Disables pull-to-refresh and overscroll glow effect.
      Still keeps swipe navigations. */
   overscroll-behavior-y: none;
@@ -467,73 +467,73 @@ margin: 0rem !important;
 </style>
   <script>
 // +++++++ STOP SITE SCROLLING WHEN MENU IS OPEN ++++++++
-  	var menuVisible = false;
-	$("#desktop-menu-icon").on( "click", function() {
-  	if (menuVisible === false) {
-    	console.log('menu open');
-      	console.log('#desktop-menu-icon clicked');
+        var menuVisible = false;
+        $("#desktop-menu-icon").on( "click", function() {
+        if (menuVisible === false) {
+        console.log('menu open');
+        console.log('#desktop-menu-icon clicked');
        menuVisible = true;
       $("body").css('overflow','hidden');
     preventDefault();
     } else if (menuVisible === true) {
-    	console.log('menu close');
+        console.log('menu close');
       console.log('#desktop-menu-icon clicked');
       menuVisible = false;
       $("body").css('overflow','visible');
     preventDefault();
     }
-	});
+        });
   $("#desktop-menu-icon-inside").on( "click", function() {
-  	if (menuVisible === false) {
-    	console.log('menu open');
+        if (menuVisible === false) {
+        console.log('menu open');
       console.log('#desktop-menu-icon-inside clicked');
        menuVisible = true;
       $("body").css('overflow','hidden');
       stopPropagation();
     preventDefault();
     } else if (menuVisible === true) {
-    	console.log('menu close');
+        console.log('menu close');
       console.log('#desktop-menu-icon-inside clicked');
       menuVisible = false;
       $("body").css('overflow','visible');
       stopPropagation();
     preventDefault();
     }
-	});
+        });
 $("#logo-menu").on( "click", function() {
-  	if (menuVisible === false) {
-    	console.log('menu open');
+        if (menuVisible === false) {
+        console.log('menu open');
       console.log('#logo-menu clicked');
        menuVisible = true;
       $("body").css('overflow','hidden');
     stopPropagation();
     preventDefault();
     } else if (menuVisible === true) {
-    	console.log('menu close');
+        console.log('menu close');
       console.log('#logo-menu clicked');
       menuVisible = false;
       $("body").css('overflow','visible');
       stopPropagation();
     preventDefault();
     }
-	});
+        });
 $("#close-menu").on( "click", function() {
-  	if (menuVisible === false) {
-    	console.log('menu open');
+        if (menuVisible === false) {
+        console.log('menu open');
       console.log('#close-menu clicked');
        menuVisible = true;
       $("body").css('overflow','hidden');
       stopPropagation();
     preventDefault();
     } else if (menuVisible === true) {
-    	console.log('menu close');
+        console.log('menu close');
       console.log('#close-menu clicked');
       menuVisible = false;
       $("body").css('overflow','visible');
       stopPropagation();
     preventDefault();
     }
-	});
+        });
 // ++++++++ PREVENT ELASTIC SCROLLING ON MACOS +++++++++
 $(window).on('scroll',function(){
     var dh = $(document).height(),
@@ -566,48 +566,48 @@ function osfunction ()
 }
   osfunction();
  if(finalOs === "MacOS") {
-    	$(".header-nav__link").css('height',"2.5vw");
+        $(".header-nav__link").css('height',"2.5vw");
       $(".header-nav__link").css('padding-top',"0.5vw");
       $(".visit-site-text").css('padding-top',"5px");
-   	 $(".more-companyname").css('height',"2.5vw");
+         $(".more-companyname").css('height',"2.5vw");
       $(".more-companyname").css('padding-top',"1.4vw");
     $(".more-companyname").css('display',"inline-block");
     console.log('MacOS adjustments in place');
   } 
 </script>
   <style>
-	body {
+        body {
   /* Disables pull-to-refresh and overscroll glow effect.
      Still keeps swipe navigations. */
   overscroll-behavior-y: none;
 }
-	.typed-cursor {
+        .typed-cursor {
   color: #f80094;
   font-size: 9vw;
   margin-left: 3vw;
   margin-bottom: 40px;
 }
-	.work-callout.outline {
+        .work-callout.outline {
   -webkit-text-stroke: 2px #fff;
-	-webkit-font-smoothing: subpixel-antialiased;
+        -webkit-font-smoothing: subpixel-antialiased;
   }
   .text-outline {
-  	-webkit-text-stroke: 1px black;
+        -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: 5d5d5d;
   }
   #desktop-menu {
-  	overscroll-behavior: none;
+        overscroll-behavior: none;
   }
-	body {
-  	overflow-x: hidden;
+        body {
+        overflow-x: hidden;
   }
   .gradient-bg {
-	background-image: linear-gradient(150deg, #ff3584, #f63a91, #eb409d, #df47a8, #d14eb2, #d04db3, #ce4db5, #cd4cb6, #d942af, #e435a8, #ee239e, #f80094);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+        background-image: linear-gradient(150deg, #ff3584, #f63a91, #eb409d, #df47a8, #d14eb2, #d04db3, #ce4db5, #cd4cb6, #d942af, #e435a8, #ee239e, #f80094);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
-	.two-color-gradient {
-  	background-image: linear-gradient(120deg, #f80094, #eb2aa2, #dd3dad, #cd4cb6, #bd57bd);
+        .two-color-gradient {
+        background-image: linear-gradient(120deg, #f80094, #eb2aa2, #dd3dad, #cd4cb6, #bd57bd);
   }
 @-webkit-keyframes hue {
   from {
@@ -618,51 +618,31 @@ function osfunction ()
   }
 }
 </style>
-  <script>
-  var userAgent = window.navigator.userAgent,
-      platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
-      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-      os = null;
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    os = 'iOS';
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'Windows';
-  } else if (/Android/.test(userAgent)) {
-    os = 'Android';
-  } else if (/Linux/.test(platform)) {
-    os = 'Linux';
-  }
-  return os;
-</script>
   <!-- 
 <style>
-	.company-wrap {
+        .company-wrap {
   background-color: transparent;
-  	background-size: 0 100%;
-  	background-image: linear-gradient(to left, #e31836, #e31836);
+        background-size: 0 100%;
+        background-image: linear-gradient(to left, #e31836, #e31836);
     background-repeat: no-repeat;
-  	transition: all 0.5s;
+        transition: all 0.5s;
   }
   .company-wrap:hover,
   .company-wrap:focus,
   .company-wrap:active {
   color: #ffffff;
-  	background-image: linear-gradient(to left, #e31836, #e31836);
+        background-image: linear-gradient(to left, #e31836, #e31836);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: all 0.5s;
   }
   .company-wrap.sunbelt {
-  	background-image: linear-gradient(to left, #007e41, #007e41);
+        background-image: linear-gradient(to left, #007e41, #007e41);
   }
   .company-wrap.sunbelt:hover,
   .company-wrap.sunbelt:focus,
   .company-wrap.sunbelt:active { 
-  	background-image: linear-gradient(to left, #007e41, #007e41);
+        background-image: linear-gradient(to left, #007e41, #007e41);
   }
 </style>
 --!>
@@ -677,13 +657,13 @@ function osfunction ()
         wrapperSpeed: 0.065
     });
     $(window).on('scroll', function () {
-		var element = $('#work-left'),
-     		scrollTop     = $(window).scrollTop(),
-     		elementOffset = $('#sticky').offset().top,
-     		distance      = (elementOffset - scrollTop),
-     		addValue      = (scrollTop - distance);
+                var element = $('#work-left'),
+                scrollTop     = $(window).scrollTop(),
+                elementOffset = $('#sticky').offset().top,
+                distance      = (elementOffset - scrollTop),
+                addValue      = (scrollTop - distance);
  //   if((scrollTop - distance) > 0) {
- //   	element.css("padding-top", `${addValue}px`);
+ //     element.css("padding-top", `${addValue}px`);
  //   }
 });
  }
