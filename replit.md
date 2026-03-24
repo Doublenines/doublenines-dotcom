@@ -19,6 +19,17 @@ web/
   work.html                  # Work/portfolio page
   404.html                   # 404 error page
   privacy-policy.html        # Privacy policy
+  products/                  # Product pages
+    fuerza-agents.html
+    fuerza-chat.html
+  blog/                      # Blog section (6 posts + index)
+    index.html               # Blog overview with card grid
+    fuerza-chat-launch.html  # March 20, 2026
+    fuerza-agents-beta.html  # February 12, 2026
+    fuerza-talent-launch.html # January 19, 2026
+    princess-cruises-ai-search.html # October 27, 2025
+    cv-document-analysis.html # April 9, 2025
+    coop-99-sprints.html     # December 1, 2024
   case-study/                # 12 case study pages
     bacardi-freepour.html
     black-pearl.html

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>99 Sprints: What We Learned Building Coop's Truck Sharing Platform - Double Nines</title>
+  <meta name="description" content="Reflections on 99 sprints of building the trucking industry's first asset sharing platform — the process, the pivots, and the lessons.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="99 Sprints: What We Learned Building Coop's Truck Sharing Platform">
+  <meta property="og:description" content="Reflections on 99 sprints of building the trucking industry's first asset sharing platform — the process, the pivots, and the lessons.">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2024-12-01">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "99 Sprints: What We Learned Building Coop's Truck Sharing Platform",
+    "datePublished": "2024-12-01",
+    "author": {"@type": "Organization", "name": "Double Nines"},
+    "publisher": {"@type": "Organization", "name": "Double Nines", "url": "https://doublenines.co"},
+    "description": "Reflections on 99 sprints of building the trucking industry's first asset sharing platform — the process, the pivots, and the lessons."
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/wordmark-notm.svg" alt="Double Nines"></a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-trigger">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="https://fuerza.work" target="_blank" class="nav-dropdown-item">
+              <div class="nav-dropdown-item-name">Fuerza Talent</div>
+              <div class="nav-dropdown-item-desc">AI-ready talent for product teams</div>
+            </a>
+            <a href="../products/fuerza-agents.html" class="nav-dropdown-item">
+              <div class="nav-dropdown-item-name">Fuerza Agents <span class="beta-pill">Beta</span></div>
+              <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
+            </a>
+            <a href="../products/fuerza-chat.html" class="nav-dropdown-item">
+              <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
+              <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
+            </a>
+          </div>
+        </div>
+        <a href="../services.html">Services</a>
+        <a href="../work.html">Work</a>
+        <a href="../blog/">Blog</a>
+        <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+        <a href="mailto:hi@doublenines.co" class="nav-cta">Get in touch &rarr;</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+    <div class="mobile-menu-label">Products</div>
+    <a href="https://fuerza.work" target="_blank" class="mobile-menu-sub">Fuerza Talent</a>
+    <a href="../products/fuerza-agents.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Agents <span class="beta-pill">Beta</span></a>
+    <a href="../products/fuerza-chat.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Chat <span class="beta-pill">Beta</span></a>
+    <a href="../services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
+    <a href="../work.html" onclick="this.parentElement.classList.remove('open')">Work</a>
+    <a href="../blog/" onclick="this.parentElement.classList.remove('open')">Blog</a>
+    <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+    <a href="mailto:hi@doublenines.co">Contact</a>
+  </div>
+
+  <section class="hero container">
+    <div class="hero-content">
+      <a href="../blog/" class="btn-text">&larr; Back to blog</a>
+      <h1>99 Sprints: What We Learned Building Coop's Truck Sharing Platform</h1>
+      <div class="blog-article-date">December 1, 2024</div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="blog-article">
+      <p>We just wrapped sprint 99 on <strong>Coop</strong> — the trucking industry's first and only asset sharing platform. Nearly two years of bi-weekly sprints, building something that had never been built before. Here's what we learned along the way.</p>
+
+      <h2>Building for an Industry That Doesn't Trust Software</h2>
+
+      <p>The trucking industry is not Silicon Valley. Fleet operators have been burned by overpromising tech vendors before. They run on relationships, phone calls, and handshake deals. When we started building Coop, the biggest challenge wasn't technical — it was earning trust from an industry that was deeply skeptical of yet another platform claiming to solve their problems.</p>
+
+      <p>We learned early that the only way to earn that trust was to build something that worked <strong>exactly the way fleet operators already think</strong>. Not a Silicon Valley abstraction of trucking — the actual, messy, nuanced way that truck sharing happens in the real world.</p>
+
+      <h2>The Power of Sustained Sprints</h2>
+
+      <p>99 sprints is a lot of sprints. Most agencies would have declared the project "done" after 10 or 15. But building a marketplace from scratch — especially in an industry that's never had one — requires sustained commitment. The product we shipped in sprint 99 looks nothing like what we shipped in sprint 1, and that's exactly the point.</p>
+
+      <p>Some key milestones along the way:</p>
+
+      <ul>
+        <li><strong>Sprints 1-15:</strong> Core marketplace — listing assets, matching supply with demand, basic booking flow</li>
+        <li><strong>Sprints 16-35:</strong> Trust and verification — fleet verification, insurance integration, dispute resolution</li>
+        <li><strong>Sprints 36-60:</strong> Operational tooling — trip management, maintenance tracking, real-time GPS integration</li>
+        <li><strong>Sprints 61-80:</strong> Financial infrastructure — automated billing, payment processing, revenue analytics</li>
+        <li><strong>Sprints 81-99:</strong> Scale and optimization — performance tuning, advanced matching algorithms, enterprise API integrations</li>
+      </ul>
+
+      <h2>Pivots Are Not Failures</h2>
+
+      <p>We pivoted the core product model three times during those 99 sprints. Each pivot felt uncomfortable in the moment, but in retrospect, each one was essential. The market taught us things we couldn't have known at the whiteboard.</p>
+
+      <p>The biggest pivot came around sprint 40, when we realized that the marketplace model needed to shift from pure peer-to-peer to a managed marketplace with Coop playing an active operational role. Fleet operators didn't just want a platform to find trucks — they wanted someone to handle the logistics of sharing them. That insight reshaped the entire product.</p>
+
+      <h2>What 99 Sprints Teaches You</h2>
+
+      <p>Working on a single product for this long changes how you think about software development:</p>
+
+      <ol>
+        <li><strong>Velocity compounds.</strong> Sprint 80 was dramatically more productive than sprint 8 — not because we worked harder, but because we'd built the right foundations, understood the domain deeply, and had earned the team's trust.</li>
+        <li><strong>The best features come from observation.</strong> Our most impactful features weren't on any roadmap. They came from watching fleet operators use the platform and noticing where they struggled.</li>
+        <li><strong>Technical debt is real, but manageable.</strong> After 99 sprints, we've refactored core systems multiple times. The key is doing it proactively, before debt becomes a crisis.</li>
+        <li><strong>Relationships matter more than process.</strong> Our process evolved constantly, but the trust between our team and Coop's team stayed consistent. That's what made the hard decisions possible.</li>
+      </ol>
+
+      <p>Here's to the next 99. If you're building something ambitious and need a team that's in it for the long haul, <a href="mailto:hi@doublenines.co">reach out</a>.</p>
+
+      <div class="blog-read-next">
+        <div>
+          <div class="blog-read-next-label">Read next</div>
+          <a href="fuerza-chat-launch.html"><div class="blog-read-next-title">Introducing Fuerza Chat: Every Perspective, One Conversation &rarr;</div></a>
+        </div>
+      </div>
+
+      <div class="blog-newsletter">
+        <h3>Stay in the loop</h3>
+        <p>Get updates on our products, engineering insights, and company news.</p>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "24117597",
+            formId: "17cb7a91-4d65-4b51-8dea-16a541d613bf"
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-callout">Let's build<br>something</div>
+        <div>
+          <div class="footer-heading">Products</div>
+          <div class="footer-links">
+            <a href="https://fuerza.work" target="_blank">Fuerza Talent</a>
+            <a href="../products/fuerza-agents.html">Fuerza Agents <span class="beta-pill">Beta</span></a>
+            <a href="../products/fuerza-chat.html">Fuerza Chat <span class="beta-pill">Beta</span></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Company</div>
+          <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../services.html">Services</a>
+            <a href="../work.html">Work</a>
+            <a href="../blog/">Blog</a>
+            <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-links">
+            <a href="mailto:hi@doublenines.co">hi@doublenines.co</a>
+            <a href="tel:3013591431">301-359-1431</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 All rights reserved</span>
+        <a href="../privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
