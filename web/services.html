@@ -11,64 +11,21 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="css/style.css?v=2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/style.css?v=6" rel="stylesheet">
   <link href="images/favicon.svg" rel="shortcut icon" type="image/x-icon">
 </head>
-<body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="images/wordmark-notm.svg" alt="Double Nines"></a>
-      <div class="nav-links">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-dropdown-trigger">Products</a>
-          <div class="nav-dropdown-menu">
-            <a href="https://fuerza.work" target="_blank" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Talent</div>
-              <div class="nav-dropdown-item-desc">AI-ready talent for product teams</div>
-            </a>
-            <a href="products/fuerza-agents.html" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Agents <span class="beta-pill">Beta</span></div>
-              <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
-            </a>
-            <a href="products/fuerza-chat.html" class="nav-dropdown-item">
-                <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
-                <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
-              </a>
-          </div>
-        </div>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="blog/">Blog</a>
-        <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-        <a href="mailto:hi@doublenines.co" class="nav-cta">Get in touch →</a>
-      </div>
-      <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-    <div class="mobile-menu-label">Products</div>
-    <a href="https://fuerza.work" target="_blank" class="mobile-menu-sub">Fuerza Talent</a>
-    <a href="products/fuerza-agents.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Agents <span class="beta-pill">Beta</span></a>
-    <a href="products/fuerza-chat.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Chat <span class="beta-pill">Beta</span></a>
-    <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-    <a href="work.html" onclick="this.parentElement.classList.remove('open')">Work</a>
-    <a href="blog/" onclick="this.parentElement.classList.remove('open')">Blog</a>
-    <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-    <a href="mailto:hi@doublenines.co">Contact</a>
-  </div>
+<body class="page-services">
+  <div id="site-nav"></div>
 
-  <section class="hero container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <h1>AI-enabled solutions for the modern business.</h1>
-        <p>We partner with enterprises to design, build, and scale AI-powered products — combining deep technical expertise with strategic thinking to deliver real business outcomes.</p>
-        <div class="hero-cta">
-          <a href="mailto:hi@doublenines.co" class="btn btn-pill">Book a call →</a>
-          <a href="work.html" class="btn-text">See our work →</a>
+  <section class="idx-page-hero">
+    <div class="idx-page-hero-inner container">
+      <div class="idx-page-hero-text">
+        <h1 class="idx-page-hero-heading">AI-enabled solutions<br>for the modern business.</h1>
+        <p class="idx-page-hero-sub">We partner with enterprises to design, build, and scale AI-powered products — combining deep technical expertise with strategic thinking to deliver real business outcomes.</p>
+        <div class="idx-page-hero-actions">
+          <a href="mailto:hi@doublenines.co" class="idx-btn-outline">Book a call</a>
+          <a href="work.html" class="idx-btn-filled">See our work</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -84,240 +41,180 @@
           <div class="mesh-ring mesh-ring-3"></div>
           <div class="mesh-ring mesh-ring-4"></div>
         </div>
-        <img src="images/99s.svg" alt="" class="hero-logo-mark">
       </div>
     </div>
   </section>
 
-  <section class="clients-bar">
+  <section class="idx-features">
+    <div class="idx-features-grid container">
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="idx-feature-title">Strategy</h3>
+        <p class="idx-feature-desc">Business analysis, AI readiness, and product roadmapping to ground every initiative in real value.</p>
+      </div>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <h3 class="idx-feature-title">Design</h3>
+        <p class="idx-feature-desc">UX research, interface design, and prototyping that makes complex AI feel intuitive.</p>
+      </div>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 class="idx-feature-title">Engineering</h3>
+        <p class="idx-feature-desc">Full-stack development, APIs, and infrastructure built for scale, security, and performance.</p>
+      </div>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="idx-feature-title">AI Integration</h3>
+        <p class="idx-feature-desc">Model selection, fine-tuning, and deployment with enterprise-grade AI platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="idx-split">
+    <div class="idx-split-inner container">
+      <div class="idx-split-left">
+        <h2 class="idx-split-heading">Full-stack AI solutions,<br>one team.</h2>
+        <p class="idx-split-desc">We combine strategy, design, engineering, and AI expertise to build products that transform how businesses operate — from initial concept through deployment and beyond.</p>
+        <p class="idx-split-desc">No handoffs between agencies. No gaps between strategy and execution. One integrated team from day one.</p>
+        <a href="mailto:hi@doublenines.co" class="idx-btn-outline">Start a project</a>
+      </div>
+      <div class="idx-split-right">
+        <div class="idx-browser-mockup idx-browser-mockup--split">
+          <div class="idx-browser-bar">
+            <span class="idx-browser-dot" style="background:#ff5f57;"></span>
+            <span class="idx-browser-dot" style="background:#febc2e;"></span>
+            <span class="idx-browser-dot" style="background:#28c840;"></span>
+            <span class="idx-browser-title">doublenines.co</span>
+          </div>
+          <div class="idx-browser-body">
+            <div class="idx-screen-cycle">
+              <div class="idx-screen-slide" style="background:#1a1a2e;"></div>
+              <div class="idx-screen-slide" style="background:#16213e;"></div>
+              <div class="idx-screen-slide" style="background:#0f3460;"></div>
+              <div class="idx-screen-slide" style="background:#533483;"></div>
+              <div class="idx-screen-slide" style="background:#e94560;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="idx-process">
     <div class="container">
-      <p class="clients-bar-label">Trusted by industry leaders</p>
-      <div class="clients-logo-row">
-        <img src="images/logosoup/ryder.svg" alt="Ryder" class="client-logo">
-        <img src="images/logosoup/bacardi.svg" alt="Bacardi" class="client-logo">
-        <img src="images/logosoup/paramount.svg" alt="Paramount" class="client-logo">
-        <img src="images/logosoup/dominos.svg" alt="Domino's" class="client-logo">
-        <img src="images/logosoup/sunbelt-rentals.svg" alt="Sunbelt Rentals" class="client-logo">
-        <img src="images/logosoup/adobe.svg" alt="Adobe" class="client-logo">
-      </div>
-    </div>
-  </section>
-
-  <section class="section container">
-    <div class="svc-overview">
-      <div class="svc-overview-text">
-        <div class="section-label">What we do</div>
-        <h2 class="section-title">Full-Stack AI Solutions</h2>
-        <p class="section-desc">We combine strategy, design, engineering, and AI expertise to build products that transform how businesses operate — from initial concept through deployment and beyond.</p>
-        <div class="svc-checklist">
-          <div class="svc-check-item"><span class="svc-check-icon">✓</span><span><strong>Strategy</strong> — Business analysis, AI readiness, and product roadmapping</span></div>
-          <div class="svc-check-item"><span class="svc-check-icon">✓</span><span><strong>Design</strong> — UX research, interface design, and prototyping</span></div>
-          <div class="svc-check-item"><span class="svc-check-icon">✓</span><span><strong>Engineering</strong> — Full-stack development, APIs, and infrastructure</span></div>
-          <div class="svc-check-item"><span class="svc-check-icon">✓</span><span><strong>AI Integration</strong> — Model selection, fine-tuning, and deployment</span></div>
+      <h2 class="idx-faq-heading">Our process</h2>
+      <div class="idx-process-grid">
+        <div class="idx-process-step">
+          <div class="idx-process-num">01</div>
+          <h3 class="idx-feature-title">Discover</h3>
+          <p class="idx-feature-desc">Understand your business, users, and opportunities. Define success metrics and scope the engagement.</p>
         </div>
-        <div class="mt-2">
-          <a href="mailto:hi@doublenines.co" class="btn btn-pill">Book a call →</a>
+        <div class="idx-process-step">
+          <div class="idx-process-num">02</div>
+          <h3 class="idx-feature-title">Design</h3>
+          <p class="idx-feature-desc">Prototype solutions, validate with users, and refine the product vision through rapid iteration.</p>
         </div>
-      </div>
-      <div class="svc-overview-visual">
-        <div class="abstract-mesh abstract-mesh--studio" style="height:100%;min-height:360px;border-radius:var(--radius);border:1px solid var(--border)">
-          <div class="mesh-grid-dots"></div>
-          <div class="mesh-orb-a"></div>
-          <div class="mesh-orb-b"></div>
-          <div class="mesh-orb-c"></div>
-          <div class="mesh-ring-a"></div>
-          <div class="mesh-diamond"></div>
+        <div class="idx-process-step">
+          <div class="idx-process-num">03</div>
+          <h3 class="idx-feature-title">Build</h3>
+          <p class="idx-feature-desc">Engineer production-ready software with AI capabilities baked in — not bolted on.</p>
+        </div>
+        <div class="idx-process-step">
+          <div class="idx-process-num">04</div>
+          <h3 class="idx-feature-title">Deploy &amp; Scale</h3>
+          <p class="idx-feature-desc">Launch, monitor, and continuously improve. We stay engaged to ensure lasting impact.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section class="section container">
-    <div class="section-label">Services</div>
-    <h2 class="section-title">How We Deliver Value</h2>
-    <p class="section-desc">End-to-end expertise across every stage of the product lifecycle.</p>
-    <div class="svc-detail-grid">
-      <div class="svc-detail-card svc-detail-card--wide">
-        <div class="svc-detail-content">
-          <h3 class="svc-detail-title">Product Strategy &amp; AI Consulting</h3>
-          <p class="svc-detail-desc">We assess your business landscape, identify high-impact AI opportunities, and build a clear product roadmap. From competitive analysis to technical feasibility, we ensure every initiative is grounded in real business value.</p>
-        </div>
-        <div class="svc-detail-visual">
-          <div class="abstract-mesh abstract-mesh--enterprise" style="height:100%;min-height:200px">
-            <div class="mesh-grid-lines"></div>
-            <div class="mesh-orb-a"></div>
-            <div class="mesh-orb-b"></div>
-            <div class="mesh-arc-a"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="svc-detail-card">
-        <h3 class="svc-detail-title">Product Design &amp; UX</h3>
-        <p class="svc-detail-desc">User research, wireframing, visual design, and interactive prototyping. We design interfaces that make complex AI capabilities feel intuitive and effortless for end users.</p>
-      </div>
-
-      <div class="svc-detail-card">
-        <h3 class="svc-detail-title">Full-Stack Engineering</h3>
-        <p class="svc-detail-desc">Web applications, native mobile apps, APIs, and cloud infrastructure. We build production-grade software engineered for scale, security, and performance.</p>
-      </div>
-
-      <div class="svc-detail-card svc-detail-card--wide">
-        <div class="svc-detail-content">
-          <h3 class="svc-detail-title">AI Integration &amp; Automation</h3>
-          <p class="svc-detail-desc">We integrate leading AI models and platforms into your products and workflows — from intelligent document processing and natural language interfaces to predictive analytics and autonomous agents. We partner with OpenAI, Anthropic, Google, and Meta to bring enterprise-grade AI into your business.</p>
-        </div>
-        <div class="svc-detail-visual">
-          <div class="abstract-mesh abstract-mesh--studio" style="height:100%;min-height:200px">
-            <div class="mesh-grid-dots"></div>
-            <div class="mesh-orb-a"></div>
-            <div class="mesh-orb-b"></div>
-            <div class="mesh-orb-c"></div>
-            <div class="mesh-ring-a"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section class="section-centered">
+  <section class="idx-clients-bar">
     <div class="container">
-      <div class="section-label-center">Our process</div>
-      <h2 class="section-title-center">From Concept to Deployment</h2>
-      <p class="section-desc-center">A proven process designed to move fast without sacrificing quality.</p>
-      <div class="svc-process-grid">
-        <div class="svc-process-step">
-          <div class="svc-process-num">01</div>
-          <h3 class="svc-process-title">Discover</h3>
-          <p class="svc-process-desc">Understand your business, users, and opportunities. Define success metrics and scope the engagement.</p>
-        </div>
-        <div class="svc-process-step">
-          <div class="svc-process-num">02</div>
-          <h3 class="svc-process-title">Design</h3>
-          <p class="svc-process-desc">Prototype solutions, validate with users, and refine the product vision through rapid iteration.</p>
-        </div>
-        <div class="svc-process-step">
-          <div class="svc-process-num">03</div>
-          <h3 class="svc-process-title">Build</h3>
-          <p class="svc-process-desc">Engineer production-ready software with AI capabilities baked in — not bolted on.</p>
-        </div>
-        <div class="svc-process-step">
-          <div class="svc-process-num">04</div>
-          <h3 class="svc-process-title">Deploy &amp; Scale</h3>
-          <p class="svc-process-desc">Launch, monitor, and continuously improve. We stay engaged to ensure lasting impact.</p>
-        </div>
+      <p class="idx-clients-label">Trusted by industry leaders</p>
+      <div class="idx-clients-row">
+        <img src="images/logosoup/ryder.svg" alt="Ryder" class="idx-client-logo">
+        <img src="images/logosoup/bacardi.svg" alt="Bacardi" class="idx-client-logo">
+        <img src="images/logosoup/paramount.svg" alt="Paramount" class="idx-client-logo">
+        <img src="images/logosoup/dominos.svg" alt="Domino's" class="idx-client-logo">
+        <img src="images/logosoup/sunbelt-rentals.svg" alt="Sunbelt Rentals" class="idx-client-logo">
+        <img src="images/logosoup/adobe.svg" alt="Adobe" class="idx-client-logo">
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section id="partners" class="section-centered partners-section">
+  <section class="idx-faq">
     <div class="container">
-      <div class="section-label-center">AI providers we partner with</div>
-      <h2 class="section-title-center">Powered by the Best in AI</h2>
-      <p class="section-desc-center">We integrate with and build on the leading AI platforms — so our clients get enterprise-grade intelligence without building from scratch.</p>
-      <div class="partners-logo-row">
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/openai.svg" alt="OpenAI">
+      <h2 class="idx-faq-heading">Answers</h2>
+      <div class="idx-faq-list">
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What types of companies do you work with?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We work with ambitious companies of all sizes — from funded startups building their first product to Fortune 500 enterprises transforming their operations with AI. Our sweet spot is companies ready to invest in intelligent, well-crafted digital products.</p>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/anthropic.svg" alt="Anthropic">
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>How does your engagement process work?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We start with a discovery call to understand your goals, then scope a project with clear milestones. Our team works in focused sprints — strategy, design, engineering, and AI integration — with regular check-ins until launch and beyond.</p>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/meta.svg" alt="Meta">
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What AI models and frameworks do you use?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We're model-agnostic and partner with the best in the industry — OpenAI, Anthropic, Google, and Meta. We select the right models and frameworks based on your specific use case, performance requirements, and budget.</p>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/google.svg" alt="Google">
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Do you handle both design and development?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Yes. We're a full-stack product studio — strategy, UX/UI design, front-end and back-end engineering, AI integration, and deployment. One team, one process, from concept to production.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What does a typical timeline look like?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Most projects run 8-16 weeks from kickoff to launch, depending on scope and complexity. We move fast without cutting corners — and we'll give you an honest timeline estimate before we start.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Can you augment our existing team?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Absolutely. Through Fuerza Talent, we provide AI-ready designers, engineers, and product managers who integrate directly into your workflow. Whether you need one specialist or a full squad, we've got you covered.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <div id="site-footer"></div>
 
-  <section class="section container">
-    <div class="section-label">Selected work</div>
-    <h2 class="section-title">Case Studies</h2>
-    <p class="section-desc">See how we've helped enterprises build AI-enabled products that deliver real results.</p>
-    <div class="work-grid">
-      <a href="case-study/bacardi-freepour.html" class="work-card">
-        <img src="images/Screenshot-2025-03-26-at-9.41.02-AM.png" alt="Bacardi Freepour" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Bacardi</div>
-          <div class="work-card-title">Freepour App</div>
-          <div class="work-card-desc">Web Application, Native Applications, Video Content</div>
-        </div>
-      </a>
-      <a href="case-study/coop.html" class="work-card">
-        <img src="images/coopcard.svg" alt="Coop" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Coop</div>
-          <div class="work-card-title">Truck Sharing Platform</div>
-          <div class="work-card-desc">Strategy, Research, Design, Development &amp; QA</div>
-        </div>
-      </a>
-      <a href="case-study/ryder-pay.html" class="work-card">
-        <img src="images/ryderpaysvgtopng.png" alt="Ryder Pay" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Ryder</div>
-          <div class="work-card-title">Ryder Pay</div>
-          <div class="work-card-desc">Fleet Payment Solution</div>
-        </div>
-      </a>
-      <a href="case-study/torque.html" class="work-card">
-        <img src="images/torque-work-page-thumbnail.png" alt="Torque" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Ryder</div>
-          <div class="work-card-title">Torque</div>
-          <div class="work-card-desc">Mobile Maintenance Solution for Truck Fleets</div>
-        </div>
-      </a>
-    </div>
-    <div class="text-center mt-6">
-      <a href="work.html" class="btn btn-pill">See all work →</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-callout">Let's build<br>something</div>
-        <div>
-          <div class="footer-heading">Products</div>
-          <div class="footer-links">
-            <a href="https://fuerza.work" target="_blank">Fuerza Talent</a>
-            <a href="products/fuerza-agents.html">Fuerza Agents <span class="beta-pill">Beta</span></a>
-            <a href="products/fuerza-chat.html">Fuerza Chat <span class="beta-pill">Beta</span></a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Company</div>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="work.html">Work</a>
-        <a href="blog/">Blog</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Contact</div>
-          <div class="footer-links">
-            <a href="mailto:hi@doublenines.co">hi@doublenines.co</a>
-            <a href="tel:3013591431">301-359-1431</a>
-            <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 All rights reserved</span>
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+  <script src="js/components.js"></script>
+  <script>DN.mount();</script>
 </body>
 </html>

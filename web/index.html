@@ -12,57 +12,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="css/style.css?v=5" rel="stylesheet">
+  <link href="css/style.css?v=6" rel="stylesheet">
   <link href="images/favicon.svg" rel="shortcut icon" type="image/x-icon">
 </head>
 <body class="page-index">
-  <nav class="nav idx-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="images/wordmark-notm.svg" alt="Double Nines"></a>
-      <div class="idx-nav-center">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-dropdown-trigger">Products</a>
-          <div class="nav-dropdown-menu">
-            <a href="https://fuerza.work" target="_blank" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Talent</div>
-              <div class="nav-dropdown-item-desc">AI-ready talent for product teams</div>
-            </a>
-            <a href="products/fuerza-agents.html" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Agents <span class="beta-pill">Beta</span></div>
-              <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
-            </a>
-            <a href="products/fuerza-chat.html" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
-              <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
-            </a>
-          </div>
-        </div>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="blog/">Blog</a>
-        <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-      </div>
-      <div class="idx-nav-right">
-        <a href="mailto:hi@doublenines.co" class="idx-nav-link">Get in touch</a>
-        <a href="mailto:hi@doublenines.co" class="idx-nav-cta">Log In</a>
-      </div>
-      <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-    <div class="mobile-menu-label">Products</div>
-    <a href="https://fuerza.work" target="_blank" class="mobile-menu-sub">Fuerza Talent</a>
-    <a href="products/fuerza-agents.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Agents <span class="beta-pill">Beta</span></a>
-    <a href="products/fuerza-chat.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Chat <span class="beta-pill">Beta</span></a>
-    <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-    <a href="work.html" onclick="this.parentElement.classList.remove('open')">Work</a>
-    <a href="blog/" onclick="this.parentElement.classList.remove('open')">Blog</a>
-    <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-    <a href="mailto:hi@doublenines.co">Contact</a>
-  </div>
+  <div id="site-nav"></div>
 
   <section class="idx-hero">
     <div class="idx-hero-inner container">
@@ -299,44 +253,12 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-callout">Let's build<br>something</div>
-        <div>
-          <div class="footer-heading">Products</div>
-          <div class="footer-links">
-            <a href="https://fuerza.work" target="_blank">Fuerza Talent</a>
-            <a href="products/fuerza-agents.html">Fuerza Agents <span class="beta-pill">Beta</span></a>
-            <a href="products/fuerza-chat.html">Fuerza Chat <span class="beta-pill">Beta</span></a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Company</div>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="work.html">Work</a>
-            <a href="blog/">Blog</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Contact</div>
-          <div class="footer-links">
-            <a href="mailto:hi@doublenines.co">hi@doublenines.co</a>
-            <a href="tel:3013591431">301-359-1431</a>
-            <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 All rights reserved</span>
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
+  <script src="js/components.js"></script>
   <script>
+    DN.mount();
+
     function scrollTestimonials(dir) {
       var track = document.getElementById('testimonialsTrack');
       if (!track) return;

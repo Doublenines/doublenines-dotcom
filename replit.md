@@ -5,17 +5,20 @@ Static website for Double Nines (doublenines.co), a digital product design and b
 
 ## Architecture
 - **Server**: Node.js static file server (`server.js`) serving from `./web` on port 5000
-- **Frontend**: Pure HTML/CSS, no frameworks, no build step
-- **Fonts**: Inter (body, weights 400-800) + Instrument Serif (index page headings, weight 400) via Google Fonts
+- **Frontend**: Pure HTML/CSS + vanilla JS component library, no frameworks, no build step
+- **Component Library**: `web/js/components.js` — shared nav, mobile menu, footer via `DN.mount()` (root) or `DN.mount({ prefix: '../' })` (subpages)
+- **Fonts**: Inter (body, weights 400-800) + Familjen Grotesk (headings, weights 400-700) via Google Fonts
 - **Theme**: Dark (#050505 bg, #f80094 accent pink, #a855f7 accent purple, #8b8b96 muted text)
-- **Index page**: Redesigned in save.design style — serif display headings, near-black #0a0a0a bg, muted grays, minimal accent colors. Scoped under `.page-index` body class.
+- **Design system**: Shared `idx-` prefixed CSS classes for new-design pages (nav, buttons, features, split, FAQ, process, clients bar, page hero). Index-specific overrides scoped under `.page-index`.
+- **CSS version**: `?v=6` — bump on all HTML pages when CSS changes
 
 ## File Structure
 ```
 server.js                    # Static file server (port 5000)
 web/
+  js/components.js           # Vanilla JS component library (nav, footer, mobile menu)
   css/style.css              # Shared stylesheet (all pages)
-  index.html                 # Homepage
+  index.html                 # Homepage (uses DN.mount())
   services.html              # Services page (Scale.com-inspired layout)
   work.html                  # Work/portfolio page
   404.html                   # 404 error page
