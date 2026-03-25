@@ -208,7 +208,7 @@ img{max-width:100%;height:auto;display:block}
 /* ── BELIEF ── */
 .belief-label{font-size:.6875rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.5rem;text-align:center}
 .belief-statement{font-size:clamp(1.375rem,2.5vw,2rem);font-weight:400;line-height:1.55;letter-spacing:-.015em;color:var(--text);text-align:center;max-width:720px;margin:0 auto}
-.belief-statement .highlight{color:var(--text-dim)}
+.belief-statement .highlight{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
 /* ── CLIENTS GRID (old, kept for work page compatibility) ── */
 .clients-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
