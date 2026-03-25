@@ -11,216 +11,130 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="../css/style.css?v=2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="../css/style.css?v=6" rel="stylesheet">
   <link href="../images/favicon.svg" rel="shortcut icon" type="image/x-icon">
 </head>
-<body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo"><img src="../images/wordmark-notm.svg" alt="Double Nines"></a>
-      <div class="nav-links">
-        <div class="nav-dropdown">
-          <a href="#" class="nav-dropdown-trigger">Products</a>
-          <div class="nav-dropdown-menu">
-            <a href="https://fuerza.work" target="_blank" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Talent</div>
-              <div class="nav-dropdown-item-desc">AI-ready talent for product teams</div>
-            </a>
-            <a href="../products/fuerza-agents.html" class="nav-dropdown-item">
-              <div class="nav-dropdown-item-name">Fuerza Agents <span class="beta-pill">Beta</span></div>
-              <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
-            </a>
-            <a href="../products/fuerza-chat.html" class="nav-dropdown-item">
-                <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
-                <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
-              </a>
-          </div>
-        </div>
-        <a href="../services.html">Services</a>
-        <a href="../work.html">Work</a>
-        <a href="../blog/">Blog</a>
-        <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-        <a href="mailto:hi@doublenines.co" class="nav-cta">Get in touch →</a>
-      </div>
-      <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="../index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-    <div class="mobile-menu-label">Products</div>
-    <a href="https://fuerza.work" target="_blank" class="mobile-menu-sub">Fuerza Talent</a>
-    <a href="../products/fuerza-agents.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Agents <span class="beta-pill">Beta</span></a>
-    <a href="../products/fuerza-chat.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Chat <span class="beta-pill">Beta</span></a>
-    <a href="../services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-    <a href="../work.html" onclick="this.parentElement.classList.remove('open')">Work</a>
-    <a href="../blog/" onclick="this.parentElement.classList.remove('open')">Blog</a>
-    <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-    <a href="mailto:hi@doublenines.co">Contact</a>
-  </div>
+<body class="page-product">
+  <div id="site-nav"></div>
 
-  <section class="hero container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <span class="beta-pill beta-pill--lg">Beta</span>
-        <h1>Intelligent agents for your entire stack.</h1>
-        <p>Customizable AI agents that work across your product, engineering, and marketing workflows — trained on our years of process and experience building digital products.</p>
-        <div class="hero-cta">
-          <a href="mailto:hi@doublenines.co" class="btn btn-pill">Request early access →</a>
-          <a href="../services.html" class="btn-text">Learn about our services →</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="abstract-mesh abstract-mesh--enterprise">
-          <div class="mesh-grid-lines"></div>
-          <div class="mesh-orb-a"></div>
-          <div class="mesh-orb-b"></div>
-          <div class="mesh-orb-c"></div>
-          <div class="mesh-arc-a"></div>
-          <div class="mesh-arc-b"></div>
-          <div class="mesh-crosshair"></div>
-        </div>
-        <img src="../images/99s.svg" alt="" class="hero-logo-mark">
+  <section class="prod-hero">
+    <div class="prod-hero-glow prod-hero-glow--agents"></div>
+    <div class="container prod-hero-inner">
+      <span class="prod-pill">Beta</span>
+      <h1 class="prod-hero-heading">Intelligent agents for<br>your entire stack.</h1>
+      <p class="prod-hero-sub">Customizable AI agents that work across your product, engineering, and marketing workflows — trained on our years of process and experience building digital products.</p>
+      <div class="prod-hero-actions">
+        <a href="mailto:hi@doublenines.co" class="idx-btn-outline">Request early access</a>
+        <a href="../services.html" class="idx-btn-filled">Our services</a>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section class="section-centered">
+  <section class="prod-intro">
     <div class="container">
-      <div class="section-label-center">What are Fuerza Agents</div>
-      <h2 class="section-title-center">AI That Knows How to Ship</h2>
-      <p class="section-desc-center">Most AI tools are generic. Fuerza Agents are trained on real-world product development processes — the same playbooks we've used to ship 50+ products for enterprises like Ryder, Bacardi, and Paramount.</p>
+      <p class="prod-intro-label">What are Fuerza Agents</p>
+      <h2 class="prod-intro-heading">AI that knows<br>how to ship.</h2>
+      <p class="prod-intro-desc">Most AI tools are generic. Fuerza Agents are trained on real-world product development processes — the same playbooks we've used to ship 50+ products for enterprises like Ryder, Bacardi, and Paramount.</p>
     </div>
   </section>
 
-  <section class="section container">
-    <div class="product-features-grid">
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+  <section class="idx-features">
+    <div class="idx-features-grid idx-features-grid--product container">
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <h3 class="product-feature-title">Product Agents</h3>
-        <p class="product-feature-desc">Automate user research synthesis, competitive analysis, PRD drafting, and sprint planning. Your agents understand product lifecycle from discovery to launch.</p>
+        <h3 class="idx-feature-title">Product Agents</h3>
+        <p class="idx-feature-desc">Automate user research synthesis, competitive analysis, PRD drafting, and sprint planning. Your agents understand product lifecycle from discovery to launch.</p>
       </div>
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
-        <h3 class="product-feature-title">Engineering Agents</h3>
-        <p class="product-feature-desc">Code review, architecture decisions, CI/CD pipeline optimization, and technical debt management — agents that think like senior engineers.</p>
+        <h3 class="idx-feature-title">Engineering Agents</h3>
+        <p class="idx-feature-desc">Code review, architecture decisions, CI/CD pipeline optimization, and technical debt management — agents that think like senior engineers.</p>
       </div>
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
         </div>
-        <h3 class="product-feature-title">Marketing Agents</h3>
-        <p class="product-feature-desc">Content strategy, campaign optimization, SEO analysis, and performance reporting. Agents that understand growth from first principles.</p>
+        <h3 class="idx-feature-title">Marketing Agents</h3>
+        <p class="idx-feature-desc">Content strategy, campaign optimization, SEO analysis, and performance reporting. Agents that understand growth from first principles.</p>
       </div>
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         </div>
-        <h3 class="product-feature-title">Fully Customizable</h3>
-        <p class="product-feature-desc">Configure agents to match your team's specific processes, tools, and standards. They adapt to how you work — not the other way around.</p>
+        <h3 class="idx-feature-title">Fully Customizable</h3>
+        <p class="idx-feature-desc">Configure agents to match your team's specific processes, tools, and standards. They adapt to how you work — not the other way around.</p>
       </div>
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3 class="product-feature-title">Human-in-the-Loop</h3>
-        <p class="product-feature-desc">Agents handle the heavy lifting while your team stays in control. Review, approve, and refine outputs before they go live.</p>
+        <h3 class="idx-feature-title">Human-in-the-Loop</h3>
+        <p class="idx-feature-desc">Agents handle the heavy lifting while your team stays in control. Review, approve, and refine outputs before they go live.</p>
       </div>
-      <div class="product-feature-card">
-        <div class="product-feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3 class="product-feature-title">Enterprise-Grade Security</h3>
-        <p class="product-feature-desc">SOC 2-ready infrastructure, data isolation, and audit logging. Your proprietary data stays yours — always.</p>
+        <h3 class="idx-feature-title">Enterprise-Grade Security</h3>
+        <p class="idx-feature-desc">SOC 2-ready infrastructure, data isolation, and audit logging. Your proprietary data stays yours — always.</p>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section class="section-centered">
+  <section class="svc-process">
     <div class="container">
-      <div class="section-label-center">How it works</div>
-      <h2 class="section-title-center">Deploy in Days, Not Months</h2>
-      <p class="section-desc-center">Fuerza Agents integrate with the tools you already use — Jira, GitHub, Slack, Figma, Linear, and more.</p>
+      <p class="prod-intro-label">How it works</p>
+      <h2 class="prod-intro-heading">Deploy in days,<br>not months.</h2>
+      <p class="prod-intro-desc">Fuerza Agents integrate with the tools you already use — Jira, GitHub, Slack, Figma, Linear, and more.</p>
       <div class="svc-process-grid">
         <div class="svc-process-step">
-          <div class="svc-process-num">01</div>
-          <h3 class="svc-process-title">Connect</h3>
-          <p class="svc-process-desc">Link your existing tools and data sources. We support 30+ integrations out of the box.</p>
+          <div class="svc-process-marker"><span class="svc-process-line"></span><span class="svc-process-dot"></span></div>
+          <div class="svc-process-content">
+            <h3 class="idx-feature-title">Connect</h3>
+            <p class="idx-feature-desc">Link your existing tools and data sources. We support 30+ integrations out of the box.</p>
+          </div>
         </div>
         <div class="svc-process-step">
-          <div class="svc-process-num">02</div>
-          <h3 class="svc-process-title">Configure</h3>
-          <p class="svc-process-desc">Define your workflows, quality standards, and approval chains. Agents learn your team's way of working.</p>
+          <div class="svc-process-marker"><span class="svc-process-line"></span><span class="svc-process-dot"></span></div>
+          <div class="svc-process-content">
+            <h3 class="idx-feature-title">Configure</h3>
+            <p class="idx-feature-desc">Define your workflows, quality standards, and approval chains. Agents learn your team's way of working.</p>
+          </div>
         </div>
         <div class="svc-process-step">
-          <div class="svc-process-num">03</div>
-          <h3 class="svc-process-title">Deploy</h3>
-          <p class="svc-process-desc">Launch agents into your workflows. They start contributing immediately with human oversight.</p>
+          <div class="svc-process-marker"><span class="svc-process-line"></span><span class="svc-process-dot"></span></div>
+          <div class="svc-process-content">
+            <h3 class="idx-feature-title">Deploy</h3>
+            <p class="idx-feature-desc">Launch agents into your workflows. They start contributing immediately with human oversight.</p>
+          </div>
         </div>
         <div class="svc-process-step">
-          <div class="svc-process-num">04</div>
-          <h3 class="svc-process-title">Improve</h3>
-          <p class="svc-process-desc">Agents get smarter over time as they learn from your feedback and evolving processes.</p>
+          <div class="svc-process-marker"><span class="svc-process-line"></span><span class="svc-process-dot"></span></div>
+          <div class="svc-process-content">
+            <h3 class="idx-feature-title">Improve</h3>
+            <p class="idx-feature-desc">Agents get smarter over time as they learn from your feedback and evolving processes.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section class="section-centered" style="padding-bottom:clamp(5rem,10vh,8rem)">
+  <section class="prod-cta">
     <div class="container">
-      <h2 class="section-title-center">Ready to put AI agents to work?</h2>
-      <p class="section-desc-center">Fuerza Agents is currently in beta. Request early access and we'll work with you to configure agents for your specific stack and workflows.</p>
-      <a href="mailto:hi@doublenines.co" class="btn btn-pill">Request early access →</a>
+      <h2 class="prod-cta-heading">Ready to put AI agents to work?</h2>
+      <p class="prod-cta-desc">Fuerza Agents is currently in beta. Request early access and we'll work with you to configure agents for your specific stack and workflows.</p>
+      <a href="mailto:hi@doublenines.co" class="idx-btn-outline">Request early access</a>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-callout">Let's build<br>something</div>
-        <div>
-          <div class="footer-heading">Products</div>
-          <div class="footer-links">
-            <a href="https://fuerza.work" target="_blank">Fuerza Talent</a>
-            <a href="../products/fuerza-agents.html">Fuerza Agents <span class="beta-pill">Beta</span></a>
-            <a href="../products/fuerza-chat.html">Fuerza Chat <span class="beta-pill">Beta</span></a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Company</div>
-          <div class="footer-links">
-            <a href="../index.html">Home</a>
-            <a href="../services.html">Services</a>
-            <a href="../work.html">Work</a>
-            <a href="../blog/">Blog</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-heading">Contact</div>
-          <div class="footer-links">
-            <a href="mailto:hi@doublenines.co">hi@doublenines.co</a>
-            <a href="tel:3013591431">301-359-1431</a>
-            <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 All rights reserved</span>
-        <a href="../privacy-policy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>DN.mount({ prefix: '../' });</script>
 </body>
 </html>

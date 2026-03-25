@@ -9,7 +9,7 @@ Static website for Double Nines (doublenines.co), a digital product design and b
 - **Component Library**: `web/js/components.js` — shared nav, mobile menu, footer via `DN.mount()` (root) or `DN.mount({ prefix: '../' })` (subpages)
 - **Fonts**: Inter (body, weights 400-800) + Familjen Grotesk (headings, weights 400-700) via Google Fonts
 - **Theme**: Dark (#050505 bg, #f80094 accent pink, #a855f7 accent purple, #8b8b96 muted text)
-- **Design system**: Shared `idx-` prefixed CSS classes for new-design pages (nav, buttons, features, split, FAQ, process, clients bar, page hero). Index-specific overrides scoped under `.page-index`.
+- **Design system**: Shared `idx-` prefixed CSS classes for new-design pages (nav, buttons, features, split, FAQ, process, clients bar, page hero). Page-specific overrides scoped under `.page-index`, `.page-services`, `.page-product`. Product pages use `prod-` prefixed classes (prod-hero, prod-pill, prod-intro, prod-cta) with unique hero glows per product (`prod-hero-glow--agents`, `prod-hero-glow--chat`).
 - **CSS version**: `?v=6` — bump on all HTML pages when CSS changes
 
 ## File Structure

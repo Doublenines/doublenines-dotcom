@@ -576,9 +576,11 @@ img{max-width:100%;height:auto;display:block}
 
 /* ── IDX FOOTER OVERRIDE (new-design pages only) ── */
 .page-index .footer,
-.page-services .footer{border-top:1px solid rgba(255,255,255,.06)}
+.page-services .footer,
+.page-product .footer{border-top:1px solid rgba(255,255,255,.06)}
 .page-index .footer-callout,
-.page-services .footer-callout{font-family:'Familjen Grotesk',system-ui,sans-serif;font-weight:400}
+.page-services .footer-callout,
+.page-product .footer-callout{font-family:'Familjen Grotesk',system-ui,sans-serif;font-weight:400}
 
 /* ══════════════════════════════════════════════════
    INDEX PAGE — page-specific overrides
@@ -742,3 +744,45 @@ img{max-width:100%;height:auto;display:block}
   .svc-client-logo{height:20px}
   .svc-clients-logos{gap:1.5rem;row-gap:1.5rem}
 }
+
+/* ══════════════════════════════════════════════════
+   PRODUCT PAGES — shared product styles
+   ══════════════════════════════════════════════════ */
+
+/* ── Product Hero ── */
+.page-product{background:#0a0a0a}
+
+.prod-hero{position:relative;padding:clamp(8rem,18vh,14rem) 0 clamp(5rem,10vh,8rem);overflow:hidden;text-align:center}
+.prod-hero-glow{position:absolute;width:900px;height:600px;border-radius:50%;filter:blur(140px);opacity:.25;top:-20%;left:50%;transform:translateX(-50%);pointer-events:none}
+.prod-hero-glow--agents{background:radial-gradient(circle,rgba(168,85,247,.5) 0%,rgba(99,102,241,.3) 40%,transparent 70%)}
+.prod-hero-glow--chat{background:radial-gradient(circle,rgba(248,0,148,.45) 0%,rgba(168,85,247,.25) 40%,transparent 70%)}
+.prod-hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.prod-pill{display:inline-flex;align-items:center;padding:.3rem .9rem;border-radius:999px;border:1px solid rgba(168,85,247,.35);background:rgba(168,85,247,.08);color:rgba(168,85,247,.9);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem}
+.prod-hero-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:400;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:1.5rem}
+.prod-hero-sub{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.42);max-width:580px;margin-bottom:2.25rem;font-weight:400}
+.prod-hero-actions{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;justify-content:center}
+
+@media(max-width:768px){
+  .prod-hero-heading{font-size:clamp(2rem,8vw,3rem)}
+  .prod-hero-glow{width:600px;height:400px;top:-30%}
+}
+
+/* ── Product Intro Section ── */
+.prod-intro{padding:clamp(5rem,10vh,8rem) 0;border-top:1px solid rgba(255,255,255,.06)}
+.prod-intro-label{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.prod-intro-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:400;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:1.25rem}
+.prod-intro-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.42);max-width:620px}
+
+/* ── Product Features Grid Variant ── */
+.idx-features-grid--product{grid-template-columns:repeat(3,1fr)}
+.idx-features-grid--product .idx-feature-card:nth-child(3n){border-right:none}
+
+@media(max-width:768px){
+  .idx-features-grid--product{grid-template-columns:1fr}
+  .idx-features-grid--product .idx-feature-card:nth-child(3n){border-right:none}
+}
+
+/* ── Product CTA Section ── */
+.prod-cta{padding:clamp(5rem,10vh,8rem) 0;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.prod-cta-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:1.25rem}
+.prod-cta-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.42);max-width:580px;margin:0 auto 2.25rem}
