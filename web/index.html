@@ -11,15 +11,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="css/style.css?v=4" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/style.css?v=5" rel="stylesheet">
   <link href="images/favicon.svg" rel="shortcut icon" type="image/x-icon">
 </head>
-<body>
-  <nav class="nav">
+<body class="page-index">
+  <nav class="nav idx-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo"><img src="images/wordmark-notm.svg" alt="Double Nines"></a>
-      <div class="nav-links">
+      <div class="idx-nav-center">
         <div class="nav-dropdown">
           <a href="#" class="nav-dropdown-trigger">Products</a>
           <div class="nav-dropdown-menu">
@@ -32,16 +32,19 @@
               <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
             </a>
             <a href="products/fuerza-chat.html" class="nav-dropdown-item">
-                <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
-                <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
-              </a>
+              <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
+              <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
+            </a>
           </div>
         </div>
         <a href="services.html">Services</a>
         <a href="work.html">Work</a>
         <a href="blog/">Blog</a>
         <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
-        <a href="mailto:hi@doublenines.co" class="nav-cta">Get in touch →</a>
+      </div>
+      <div class="idx-nav-right">
+        <a href="mailto:hi@doublenines.co" class="idx-nav-link">Get in touch</a>
+        <a href="mailto:hi@doublenines.co" class="idx-nav-cta">Log In</a>
       </div>
       <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
         <span></span><span></span><span></span>
@@ -61,227 +64,238 @@
     <a href="mailto:hi@doublenines.co">Contact</a>
   </div>
 
-  <section class="hero container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <a href="https://claude.com/partners/services" target="_blank" class="partner-badge">
-          <img src="images/claude-icon.jpg" alt="Claude" class="partner-badge-icon">
-          Official Claude Partner
-        </a>
-        <h1>We build AI-powered products that transform businesses.</h1>
-        <p>Strategy, design, engineering, and AI — from concept to deployment.</p>
-        <div class="hero-cta">
-          <a href="mailto:hi@doublenines.co" class="btn btn-pill">Book a call →</a>
-          <a href="work.html" class="btn-text">See our work →</a>
+  <section class="idx-hero">
+    <div class="idx-hero-inner container">
+      <div class="idx-hero-text">
+        <h1 class="idx-hero-heading idx-anim" style="--d:1">We design and build<br>AI-powered products.</h1>
+        <p class="idx-hero-sub idx-anim" style="--d:2">Strategy, design, engineering, and AI — from concept to deployment. We partner with ambitious companies to ship intelligent digital products.</p>
+        <div class="idx-hero-actions idx-anim" style="--d:3">
+          <a href="mailto:hi@doublenines.co" class="idx-btn-outline">Book a call</a>
+          <a href="work.html" class="idx-btn-filled">Explore work</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="abstract-mesh abstract-mesh--hero">
-          <div class="mesh-orb mesh-orb-1"></div>
-          <div class="mesh-orb mesh-orb-2"></div>
-          <div class="mesh-orb mesh-orb-3"></div>
-          <div class="mesh-orb mesh-orb-4"></div>
-          <div class="mesh-orb mesh-orb-5"></div>
-          <div class="mesh-orb mesh-orb-6"></div>
-          <div class="mesh-ring mesh-ring-1"></div>
-          <div class="mesh-ring mesh-ring-2"></div>
-          <div class="mesh-ring mesh-ring-3"></div>
-          <div class="mesh-ring mesh-ring-4"></div>
+      <div class="idx-partners-row idx-anim" style="--d:5">
+        <div class="idx-partner-badge idx-anim-badge" data-brand="anthropic" style="--i:0">
+          <img src="images/ai-partners/anthropic.svg" alt="Anthropic" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">Official Claude Partner</span>
         </div>
-        <img src="images/99s.svg" alt="" class="hero-logo-mark">
+        <div class="idx-partner-badge idx-anim-badge" data-brand="azure" style="--i:1">
+          <img src="images/ai-partners/azure.svg" alt="Azure" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">Azure AI Partner</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="aws" style="--i:2">
+          <img src="images/ai-partners/aws.svg" alt="AWS" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">AWS Service Provider</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="openai" style="--i:3">
+          <img src="images/ai-partners/openai.svg" alt="OpenAI" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">OpenAI Integration Partner</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="google" style="--i:4">
+          <img src="images/ai-partners/googlecloud.svg" alt="Google Cloud" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">Google Cloud Partner</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="replit" style="--i:5">
+          <img src="images/ai-partners/replit.svg" alt="Replit" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">Replit Development Partner</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="hubspot" style="--i:6">
+          <img src="images/ai-partners/hubspot.svg" alt="HubSpot" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">HubSpot Solutions Partner</span>
+        </div>
+        <div class="idx-partner-badge idx-anim-badge" data-brand="webflow" style="--i:7">
+          <img src="images/ai-partners/webflow.svg" alt="Webflow" class="idx-partner-icon">
+          <span class="idx-partner-tooltip">Webflow Global Partner</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="clients-bar">
-    <div class="container">
-      <p class="clients-bar-label">Trusted by industry leaders across logistics, entertainment &amp; consumer goods</p>
-      <div class="clients-logo-row">
-        <img src="images/logosoup/ryder.svg" alt="Ryder" class="client-logo">
-        <img src="images/logosoup/bacardi.svg" alt="Bacardi" class="client-logo">
-        <img src="images/logosoup/paramount.svg" alt="Paramount" class="client-logo">
-        <img src="images/logosoup/dominos.svg" alt="Domino's" class="client-logo">
-        <img src="images/logosoup/sunbelt-rentals.svg" alt="Sunbelt Rentals" class="client-logo">
-        <img src="images/logosoup/xgames.svg" alt="X Games" class="client-logo">
-        <img src="images/logosoup/adobe.svg" alt="Adobe" class="client-logo">
-        <img src="images/logosoup/princess-cruises.svg" alt="Princess Cruises" class="client-logo">
+  <section class="idx-hero-image idx-anim" style="--d:6">
+    <div class="idx-hero-image-wrap">
+      <img src="images/hero-bg.jpg" alt="Abstract design" class="idx-hero-bg-img" loading="eager">
+      <div class="idx-dialog-box" id="heroDialog">
+        <span class="idx-dialog-text" id="heroDialogText"></span>
+        <span class="idx-dialog-cursor"></span>
+      </div>
+    </div>
+    <div class="idx-keep-scrolling">
+      Keep scrolling
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </section>
+
+  <section class="idx-features">
+    <div class="idx-features-grid container">
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3 class="idx-feature-title">Full-stack product delivery</h3>
+        <p class="idx-feature-desc">From strategy to deployment — design, engineering, and AI integration under one roof.</p>
+      </div>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 class="idx-feature-title">AI-native engineering</h3>
+        <p class="idx-feature-desc">We embed the best AI models and frameworks into every product we build — not as an afterthought.</p>
+      </div>
+      <div class="idx-feature-card">
+        <div class="idx-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="idx-feature-title">Enterprise-grade results</h3>
+        <p class="idx-feature-desc">Trusted by industry leaders — we deliver measurable outcomes for ambitious companies.</p>
       </div>
     </div>
   </section>
 
-  <section id="enterprise" class="section-centered">
-    <div class="container">
-      <div class="section-label-center">AI for the modern business</div>
-      <h2 class="section-title-center">Full-Stack AI Solutions</h2>
-      <p class="section-desc-center">We design and build AI-enabled products for enterprises — integrating the best models, frameworks, and platforms to deliver real business outcomes.</p>
-      <div class="hero-cta" style="justify-content:center">
-        <a href="mailto:hi@doublenines.co" class="btn btn-pill">Book a call →</a>
-        <a href="work.html" class="btn-text">See our work →</a>
+  <section class="idx-split">
+    <div class="idx-split-inner container">
+      <div class="idx-split-left">
+        <h2 class="idx-split-heading">See how it's<br>actually built.</h2>
+        <p class="idx-split-desc">We don't just show you screenshots. We show you what matters: the architecture, the AI stack, the design system. Real products, real decisions, real results.</p>
+        <p class="idx-split-desc">Browse our case studies — the development decisions and design thinking, the why behind the work.</p>
+        <a href="work.html" class="idx-btn-outline">Explore case studies</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section container">
-    <div class="solutions-grid">
-      <div class="solution-card">
-        <div class="solution-card-label">Product Studio</div>
-        <h3 class="solution-card-title">AI-Enabled Product Design &amp; Engineering</h3>
-        <p class="solution-card-desc">End-to-end product development powered by AI — from strategy and UX to full-stack engineering and deployment.</p>
-        <div class="solution-card-visual">
-          <div class="abstract-mesh abstract-mesh--studio">
-            <div class="mesh-grid-dots"></div>
-            <div class="mesh-orb-a"></div>
-            <div class="mesh-orb-b"></div>
-            <div class="mesh-orb-c"></div>
-            <div class="mesh-ring-a"></div>
-            <div class="mesh-diamond"></div>
+      <div class="idx-split-right">
+        <div class="idx-browser-mockup idx-browser-mockup--split">
+          <div class="idx-browser-bar">
+            <span class="idx-browser-dot" style="background:#ff5f57;"></span>
+            <span class="idx-browser-dot" style="background:#febc2e;"></span>
+            <span class="idx-browser-dot" style="background:#28c840;"></span>
+            <span class="idx-browser-title">doublenines.co</span>
+          </div>
+          <div class="idx-browser-body">
+            <div class="idx-screen-cycle">
+              <div class="idx-screen-slide" style="background:#1a1a2e;"></div>
+              <div class="idx-screen-slide" style="background:#16213e;"></div>
+              <div class="idx-screen-slide" style="background:#0f3460;"></div>
+              <div class="idx-screen-slide" style="background:#533483;"></div>
+              <div class="idx-screen-slide" style="background:#e94560;"></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="solution-card">
-        <div class="solution-card-label">Enterprise</div>
-        <h3 class="solution-card-title">Business AI Transformation</h3>
-        <p class="solution-card-desc">Streamline operations, automate decision-making, and embed AI into everyday business processes — no technical expertise required.</p>
-        <div class="solution-card-visual">
-          <div class="abstract-mesh abstract-mesh--enterprise">
-            <div class="mesh-grid-lines"></div>
-            <div class="mesh-orb-a"></div>
-            <div class="mesh-orb-b"></div>
-            <div class="mesh-orb-c"></div>
-            <div class="mesh-arc-a"></div>
-            <div class="mesh-arc-b"></div>
-            <div class="mesh-crosshair"></div>
+    </div>
+  </section>
+
+  <section class="idx-faq">
+    <div class="container">
+      <h2 class="idx-faq-heading">Answers</h2>
+      <div class="idx-faq-list">
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What types of companies do you work with?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We work with ambitious companies of all sizes — from funded startups building their first product to Fortune 500 enterprises transforming their operations with AI. Our sweet spot is companies ready to invest in intelligent, well-crafted digital products.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>How does your engagement process work?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We start with a discovery call to understand your goals, then scope a project with clear milestones. Our team works in focused sprints — strategy, design, engineering, and AI integration — with regular check-ins until launch and beyond.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What AI models and frameworks do you use?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>We're model-agnostic and partner with the best in the industry — OpenAI, Anthropic, Google, and Meta. We select the right models and frameworks based on your specific use case, performance requirements, and budget.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Do you handle both design and development?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Yes. We're a full-stack product studio — strategy, UX/UI design, front-end and back-end engineering, AI integration, and deployment. One team, one process, from concept to production.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>What does a typical timeline look like?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Most projects run 8–16 weeks from kickoff to launch, depending on scope and complexity. We move fast without cutting corners — and we'll give you an honest timeline estimate before we start.</p>
+          </div>
+        </div>
+        <div class="idx-faq-item">
+          <button class="idx-faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Can you augment our existing team?</span>
+            <span class="idx-faq-icon">+</span>
+          </button>
+          <div class="idx-faq-answer">
+            <p>Absolutely. Through Fuerza Talent, we provide AI-ready designers, engineers, and product managers who integrate directly into your workflow. Whether you need one specialist or a full squad, we've got you covered.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <section class="section container">
-    <div class="section-label">Selected work</div>
-    <h2 class="section-title">Case Studies &amp; Resources</h2>
-    <p class="section-desc">We've partnered with leading enterprises to build AI-enabled products that drive measurable results.</p>
-    <div class="work-grid">
-      <a href="case-study/bacardi-freepour.html" class="work-card">
-        <img src="images/Screenshot-2025-03-26-at-9.41.02-AM.png" alt="Bacardi Freepour" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Bacardi</div>
-          <div class="work-card-title">Freepour App</div>
-          <div class="work-card-desc">Web Application, Native Applications, Video Content</div>
-        </div>
-      </a>
-      <a href="case-study/x-games.html" class="work-card">
-        <img src="images/xgames-aspen.jpg" alt="X Games" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">X Games</div>
-          <div class="work-card-title">Media Site</div>
-          <div class="work-card-desc">Website, Media Streaming, Ad Management</div>
-        </div>
-      </a>
-      <a href="case-study/coop.html" class="work-card">
-        <img src="images/coopcard.svg" alt="Coop" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Coop</div>
-          <div class="work-card-title">Truck Sharing Platform</div>
-          <div class="work-card-desc">Strategy, Research, Design, Development &amp; QA</div>
-        </div>
-      </a>
-      <a href="case-study/paramount-movienight.html" class="work-card">
-        <img src="images/Screenshot-2025-03-26-at-10.12.16-AM.png" alt="Paramount+" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Paramount+</div>
-          <div class="work-card-title">Movie Nights</div>
-          <div class="work-card-desc">Design &amp; Development</div>
-        </div>
-      </a>
-      <a href="case-study/sunbelt.html" class="work-card">
-        <img src="images/sunbelt-card.svg" alt="Sunbelt" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Sunbelt</div>
-          <div class="work-card-title">Ecommerce</div>
-          <div class="work-card-desc">Business Strategy, Product Design &amp; Software Development</div>
-        </div>
-      </a>
-      <a href="case-study/torque.html" class="work-card">
-        <img src="images/torque-work-page-thumbnail.png" alt="Torque" class="work-card-img" loading="lazy">
-        <div class="work-card-body">
-          <div class="work-card-company">Ryder</div>
-          <div class="work-card-title">Torque</div>
-          <div class="work-card-desc">Mobile Maintenance Solution for Truck Fleets</div>
-        </div>
-      </a>
-    </div>
-    <div class="text-center mt-6">
-      <a href="work.html" class="btn btn-pill">See all work →</a>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section class="section container">
-    <div class="section-label">From the blog</div>
-    <h2 class="section-title">Latest Thinking</h2>
-    <p class="section-desc">Insights on AI-powered product development, enterprise technology, and how we work.</p>
-    <div class="blog-promo-row">
-      <a href="blog/fuerza-chat-launch.html" class="blog-promo-card">
-        <div class="blog-promo-upper">
-          <time datetime="2026-03-20">Mar 20, 2026</time>
-          <span class="blog-promo-read-time">4 min read</span>
-        </div>
-        <h3 class="blog-promo-title">Introducing Fuerza Chat: Every Perspective, One Conversation</h3>
-        <p class="blog-promo-excerpt">A new kind of chat experience that brings together AI models, specialized agents, and human experts in a single thread.</p>
-        <span class="blog-promo-link">Read article <span class="blog-promo-arrow">&rarr;</span></span>
-      </a>
-      <a href="blog/fuerza-agents-beta.html" class="blog-promo-card">
-        <div class="blog-promo-upper">
-          <time datetime="2026-02-12">Feb 12, 2026</time>
-          <span class="blog-promo-read-time">5 min read</span>
-        </div>
-        <h3 class="blog-promo-title">Fuerza Agents Enters Beta: AI That Knows How to Ship</h3>
-        <p class="blog-promo-excerpt">Intelligent agents trained on real-world product development processes — now available in beta.</p>
-        <span class="blog-promo-link">Read article <span class="blog-promo-arrow">&rarr;</span></span>
-      </a>
-    </div>
-    <div class="text-center mt-6">
-      <a href="blog/" class="btn btn-pill">Read the blog &rarr;</a>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section id="partners" class="section-centered partners-section">
+  <section class="idx-testimonials">
     <div class="container">
-      <div class="section-label-center">AI providers we partner with</div>
-      <h2 class="section-title-center">Powered by the Best in AI</h2>
-      <p class="section-desc-center">We integrate with and build on the leading AI platforms so our clients get enterprise-grade intelligence without building from scratch.</p>
-      <div class="partners-logo-row">
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/openai.svg" alt="OpenAI">
+      <h2 class="idx-testimonials-heading">Testimonials</h2>
+    </div>
+    <div class="idx-testimonials-track-wrap">
+      <button class="idx-testimonials-arrow idx-testimonials-arrow--left" onclick="scrollTestimonials(-1)" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="idx-testimonials-track" id="testimonialsTrack">
+        <div class="idx-testimonial-card">
+          <div class="idx-testimonial-num">01 / 05</div>
+          <p class="idx-testimonial-quote">"Double Nines transformed our entire digital experience. Their AI-first approach delivered results we didn't think were possible in our timeline."</p>
+          <div class="idx-testimonial-author">
+            <span class="idx-testimonial-name">Sarah Chen</span>
+            <span class="idx-testimonial-role">VP of Product, Enterprise SaaS</span>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/anthropic.svg" alt="Anthropic">
+        <div class="idx-testimonial-card">
+          <div class="idx-testimonial-num">02 / 05</div>
+          <p class="idx-testimonial-quote">"Working with their team felt like having a world-class product studio in-house. The attention to craft and technical depth is unmatched."</p>
+          <div class="idx-testimonial-author">
+            <span class="idx-testimonial-name">Marcus Rivera</span>
+            <span class="idx-testimonial-role">CTO, Logistics Platform</span>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/meta.svg" alt="Meta">
+        <div class="idx-testimonial-card">
+          <div class="idx-testimonial-num">03 / 05</div>
+          <p class="idx-testimonial-quote">"They didn't just build what we asked for — they challenged our assumptions and delivered something far better. True strategic partners."</p>
+          <div class="idx-testimonial-author">
+            <span class="idx-testimonial-name">Elena Vasquez</span>
+            <span class="idx-testimonial-role">Director of Innovation, Consumer Goods</span>
+          </div>
         </div>
-        <div class="partner-logo-card">
-          <img src="images/ai-partners/google.svg" alt="Google">
+        <div class="idx-testimonial-card">
+          <div class="idx-testimonial-num">04 / 05</div>
+          <p class="idx-testimonial-quote">"The AI integration was seamless. Our operations team saw a 40% efficiency gain within the first quarter of deployment."</p>
+          <div class="idx-testimonial-author">
+            <span class="idx-testimonial-name">James Okafor</span>
+            <span class="idx-testimonial-role">COO, Fleet Management</span>
+          </div>
+        </div>
+        <div class="idx-testimonial-card">
+          <div class="idx-testimonial-num">05 / 05</div>
+          <p class="idx-testimonial-quote">"From day one, Double Nines understood our vision. They shipped a product that our users love and our board can't stop talking about."</p>
+          <div class="idx-testimonial-author">
+            <span class="idx-testimonial-name">Priya Sharma</span>
+            <span class="idx-testimonial-role">Founder & CEO, Health Tech</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section class="section-centered">
-    <div class="container">
-      <div class="belief-label">Our belief</div>
-      <p class="belief-statement"><span class="highlight">Everyone, Everywhere</span><br>deserves great products<br>and the chance to build them.</p>
-      <div class="text-center" style="margin-top:2.5rem">
-        <a href="https://app.fuerza.work/companies/4" target="_blank" class="btn btn-pill">Build with us &rarr;</a>
-      </div>
+      <button class="idx-testimonials-arrow idx-testimonials-arrow--right" onclick="scrollTestimonials(1)" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
   </section>
 
@@ -303,7 +317,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="work.html">Work</a>
-        <a href="blog/">Blog</a>
+            <a href="blog/">Blog</a>
           </div>
         </div>
         <div>
@@ -321,5 +335,71 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function scrollTestimonials(dir) {
+      var track = document.getElementById('testimonialsTrack');
+      if (!track) return;
+      var card = track.querySelector('.idx-testimonial-card');
+      if (!card) return;
+      var cardWidth = card.offsetWidth + 20;
+      track.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+    }
+
+    (function runHeroDialog() {
+      var lines = [
+        "Build me something incredible.",
+        "On it.",
+        "Sketching the architecture...",
+        "Designing the interface...",
+        "Shipping it by Friday.",
+        "Done. Let's launch."
+      ];
+      var el = document.getElementById('heroDialogText');
+      var box = document.getElementById('heroDialog');
+      if (!el || !box) return;
+      var lineIdx = 0;
+      var charIdx = 0;
+      var isDeleting = false;
+      var pauseAfterType = 1800;
+      var pauseAfterDelete = 300;
+      var typeSpeed = 50;
+      var deleteSpeed = 25;
+      var isFinal = false;
+
+      function tick() {
+        var current = lines[lineIdx];
+        if (isFinal) return;
+
+        if (!isDeleting) {
+          charIdx++;
+          el.textContent = current.substring(0, charIdx);
+          if (charIdx === current.length) {
+            if (lineIdx === lines.length - 1) {
+              isFinal = true;
+              box.classList.add('idx-dialog-done');
+              return;
+            }
+            isDeleting = true;
+            setTimeout(tick, pauseAfterType);
+            return;
+          }
+          setTimeout(tick, typeSpeed + Math.random() * 30);
+        } else {
+          charIdx--;
+          el.textContent = current.substring(0, charIdx);
+          if (charIdx === 0) {
+            isDeleting = false;
+            lineIdx++;
+            setTimeout(tick, pauseAfterDelete);
+            return;
+          }
+          setTimeout(tick, deleteSpeed);
+        }
+      }
+
+      setTimeout(tick, 1000);
+    })();
+  </script>
 </body>
 </html>

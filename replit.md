@@ -6,8 +6,9 @@ Static website for Double Nines (doublenines.co), a digital product design and b
 ## Architecture
 - **Server**: Node.js static file server (`server.js`) serving from `./web` on port 5000
 - **Frontend**: Pure HTML/CSS, no frameworks, no build step
-- **Font**: Inter (Google Fonts, weights 400-800)
+- **Fonts**: Inter (body, weights 400-800) + Instrument Serif (index page headings, weight 400) via Google Fonts
 - **Theme**: Dark (#050505 bg, #f80094 accent pink, #a855f7 accent purple, #8b8b96 muted text)
+- **Index page**: Redesigned in save.design style — serif display headings, near-black #0a0a0a bg, muted grays, minimal accent colors. Scoped under `.page-index` body class.
 
 ## File Structure
 ```
@@ -48,7 +49,7 @@ web/
 
 ## Key Design Decisions
 - No Webflow CSS/JS dependencies — completely custom clean code
-- No jQuery — vanilla JS only (minimal, just mobile menu toggle)
+- No jQuery — vanilla JS only (mobile menu toggle, FAQ accordion, testimonials carousel)
 - Scale.com-inspired aesthetic: #050505 deep black bg, radial gradient hero glows, tight letter-spacing (-.045em), frosted glass nav
 - Nav: `.nav-cta` glass-style button, `.nav-hamburger` as accessible `<button>`, backdrop-filter blur
 - Buttons: `.btn-primary` (pink glow), `.btn-ghost` (subtle border), `.btn-arrow` suffix
