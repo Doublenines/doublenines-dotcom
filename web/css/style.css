@@ -91,9 +91,9 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* ── ABSTRACT MESH (shared) ── */
-.abstract-mesh{position:relative;overflow:hidden}
+.abstract-mesh{position:relative}
 .abstract-mesh--hero{position:absolute;inset:0}
-.abstract-mesh--card{height:240px}
+.abstract-mesh--card{height:240px;overflow:hidden}
 .mesh-orb{position:absolute;border-radius:50%;filter:blur(60px)}
 .mesh-ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.15)}
 
