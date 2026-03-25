@@ -301,14 +301,7 @@ img{max-width:100%;height:auto;display:block}
 .svc-detail-desc{font-size:.875rem;color:var(--text-muted);line-height:1.7}
 @media(max-width:480px){.svc-detail-grid{grid-template-columns:1fr}.svc-detail-card--wide{grid-template-columns:1fr}.svc-detail-card--wide .svc-detail-visual{min-height:200px}}
 
-.svc-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;text-align:left}
-.svc-process-step{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.5rem;transition:border-color .3s}
-.svc-process-step:hover{border-color:var(--border-hover)}
-.svc-process-num{font-size:2rem;font-weight:800;letter-spacing:-.04em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem}
-.svc-process-title{font-size:1rem;font-weight:600;color:var(--text-bright);margin-bottom:.5rem}
-.svc-process-desc{font-size:.8125rem;color:var(--text-muted);line-height:1.6}
-@media(max-width:768px){.svc-process-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.svc-process-grid{grid-template-columns:1fr}}
+/* old svc-process removed — replaced by new .svc-process below */
 
 /* ── PRODUCT PAGE ── */
 .product-features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -667,4 +660,61 @@ img{max-width:100%;height:auto;display:block}
   .page-index .idx-testimonials-arrow{width:34px;height:34px}
   .page-index .idx-testimonials-arrow--left{left:8px}
   .page-index .idx-testimonials-arrow--right{right:8px}
+}
+
+/* ══════════════════════════════════════════════════
+   SERVICES PAGE — page-specific styles
+   ══════════════════════════════════════════════════ */
+
+.page-services{background:#0a0a0a}
+
+/* ── Services Hero ── */
+.svc-hero{position:relative;padding:clamp(7rem,14vh,10rem) 0 clamp(4rem,8vh,6rem) 0;overflow:hidden}
+.svc-hero-glow{position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse at center,rgba(168,85,247,.12) 0%,rgba(248,0,148,.06) 40%,transparent 70%);pointer-events:none;filter:blur(40px)}
+.svc-hero-inner{position:relative;z-index:1;max-width:720px}
+.svc-hero-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:400;line-height:1.08;letter-spacing:-.02em;color:#fff;margin-bottom:1.5rem}
+.svc-hero-sub{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.42);max-width:540px;margin-bottom:2.25rem;font-weight:400}
+.svc-hero-actions{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .svc-hero-heading{font-size:clamp(2rem,8vw,3rem)}
+  .svc-hero-glow{width:600px;height:400px;top:-30%}
+}
+
+/* ── Services Process (timeline style) ── */
+.svc-process{padding:clamp(5rem,10vh,8rem) 0;border-top:1px solid rgba(255,255,255,.06)}
+.svc-process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(2rem,4vh,3.5rem)}
+.svc-process-step{position:relative;padding:0 clamp(1.25rem,2.5vw,2rem)}
+.svc-process-marker{display:flex;flex-direction:column;align-items:center;margin-bottom:1.25rem}
+.svc-process-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.08);position:relative;z-index:1;flex-shrink:0}
+.svc-process-line{width:100%;height:1px;background:rgba(255,255,255,.08);position:absolute;top:5px;left:0}
+.svc-process-step:first-child .svc-process-line{left:50%}
+.svc-process-step:last-child .svc-process-line{right:50%;left:auto;width:50%}
+.svc-process-content .idx-feature-title{margin-top:.25rem}
+
+@media(max-width:768px){
+  .svc-process-grid{grid-template-columns:1fr;gap:1.5rem}
+  .svc-process-marker{flex-direction:row;gap:.75rem;margin-bottom:.75rem}
+  .svc-process-line{width:1px;height:100%;top:0;left:5px;position:absolute}
+  .svc-process-step:first-child .svc-process-line{top:50%;left:5px}
+  .svc-process-step:last-child .svc-process-line{height:50%;top:0;left:5px}
+  .svc-process-step{padding:0 0 0 2rem}
+  .svc-process-marker{position:absolute;left:0;top:0;height:100%;flex-direction:column}
+  .svc-process-dot{margin-top:2px}
+}
+
+/* ── Services Clients (prominent) ── */
+.svc-clients{padding:clamp(5rem,10vh,8rem) 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.svc-clients-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:400;line-height:1.15;letter-spacing:-.02em;color:#fff;margin-bottom:clamp(2.5rem,5vh,4rem);max-width:500px}
+.svc-clients-logos{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(2rem,5vw,4rem);row-gap:clamp(2rem,4vw,3rem)}
+.svc-client-logo{height:32px;width:auto;opacity:.35;filter:brightness(0) invert(1);transition:opacity .3s}
+.svc-client-logo:hover{opacity:.7}
+
+@media(max-width:768px){
+  .svc-clients-heading{font-size:clamp(1.5rem,6vw,2rem)}
+  .svc-client-logo{height:24px}
+}
+@media(max-width:480px){
+  .svc-client-logo{height:20px}
+  .svc-clients-logos{gap:1.5rem;row-gap:1.5rem}
 }
