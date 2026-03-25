@@ -97,11 +97,11 @@ img{max-width:100%;height:auto;display:block}
 .mesh-orb{position:absolute;border-radius:50%;filter:blur(60px)}
 .mesh-ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.06)}
 
-.abstract-mesh--hero .mesh-orb-1{width:280px;height:280px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:5%;right:5%;opacity:.35;animation:meshFloat 8s ease-in-out infinite}
-.abstract-mesh--hero .mesh-orb-2{width:220px;height:220px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:10%;right:25%;opacity:.3;animation:meshFloat 10s ease-in-out infinite reverse}
-.abstract-mesh--hero .mesh-orb-3{width:180px;height:180px;background:radial-gradient(circle,#3b82f6 0%,transparent 70%);top:35%;left:10%;opacity:.2;animation:meshFloat 12s ease-in-out infinite}
-.abstract-mesh--hero .mesh-ring-1{width:300px;height:300px;top:10%;right:0;animation:meshSpin 20s linear infinite}
-.abstract-mesh--hero .mesh-ring-2{width:200px;height:200px;bottom:15%;right:30%;animation:meshSpin 15s linear infinite reverse}
+.abstract-mesh--hero .mesh-orb-1{width:280px;height:280px;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);top:5%;right:5%;opacity:.35;animation:meshFloat 6s ease-in-out infinite}
+.abstract-mesh--hero .mesh-orb-2{width:220px;height:220px;background:radial-gradient(circle,var(--accent2) 0%,transparent 70%);bottom:10%;right:25%;opacity:.3;animation:meshFloat2 7s ease-in-out infinite}
+.abstract-mesh--hero .mesh-orb-3{width:180px;height:180px;background:radial-gradient(circle,#3b82f6 0%,transparent 70%);top:35%;left:10%;opacity:.2;animation:meshFloat3 9s ease-in-out infinite}
+.abstract-mesh--hero .mesh-ring-1{width:300px;height:300px;top:10%;right:0;animation:meshPulse 8s ease-in-out infinite,meshSpin 25s linear infinite}
+.abstract-mesh--hero .mesh-ring-2{width:200px;height:200px;bottom:15%;right:30%;animation:meshPulse 6s ease-in-out infinite 2s,meshSpin 18s linear infinite reverse}
 
 /* ── STUDIO CARD ── */
 .abstract-mesh--studio{height:260px;background:linear-gradient(135deg,rgba(248,0,148,.04) 0%,transparent 50%,rgba(168,85,247,.04) 100%)}
@@ -125,7 +125,10 @@ img{max-width:100%;height:auto;display:block}
 .abstract-mesh--enterprise .mesh-crosshair::before{width:1px;height:100%;left:50%;top:0}
 .abstract-mesh--enterprise .mesh-crosshair::after{width:100%;height:1px;top:50%;left:0}
 
-@keyframes meshFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-15px)}}
+@keyframes meshFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(15px,-20px) scale(1.05)}50%{transform:translate(-10px,-30px) scale(.97)}75%{transform:translate(-20px,10px) scale(1.03)}}
+@keyframes meshFloat2{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(-18px,12px) scale(.96)}50%{transform:translate(20px,25px) scale(1.06)}75%{transform:translate(8px,-18px) scale(.98)}}
+@keyframes meshFloat3{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-12px,-22px) scale(1.04)}66%{transform:translate(16px,14px) scale(.95)}}
+@keyframes meshPulse{0%,100%{opacity:.06;transform:scale(1) rotate(0deg)}50%{opacity:.1;transform:scale(1.04) rotate(3deg)}}
 @keyframes meshSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 
 /* ── BUTTONS ── */
