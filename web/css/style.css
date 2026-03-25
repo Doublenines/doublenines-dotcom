@@ -662,6 +662,30 @@ img{max-width:100%;height:auto;display:block}
   .page-index .idx-testimonials-arrow--right{right:8px}
 }
 
+/* ── INDEX BLOG PROMO ── */
+.page-index .idx-blog-promo{position:relative;padding:clamp(5rem,10vh,8rem) 0;overflow:hidden}
+.page-index .idx-blog-promo-bg{position:absolute;inset:0;z-index:0}
+.page-index .idx-blog-promo-img{width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(.6)}
+.page-index .idx-blog-promo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#0a0a0a 0%,rgba(10,10,10,.6) 30%,rgba(10,10,10,.6) 70%,#0a0a0a 100%)}
+.page-index .idx-blog-promo-inner{position:relative;z-index:1}
+.page-index .idx-blog-promo-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(2rem,4vh,3.5rem);gap:1rem;flex-wrap:wrap}
+.page-index .idx-blog-promo-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:#fff;letter-spacing:-.02em}
+.page-index .idx-blog-promo-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
+.page-index .idx-blog-card{display:flex;flex-direction:column;padding:clamp(1.5rem,3vw,2.25rem);background:#0a0a0a;text-decoration:none;transition:background .3s}
+.page-index .idx-blog-card:hover{background:rgba(255,255,255,.03)}
+.page-index .idx-blog-card-date{font-size:.6875rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:.75rem}
+.page-index .idx-blog-card-title{font-size:1.0625rem;font-weight:600;color:#fff;line-height:1.35;letter-spacing:-.01em;margin-bottom:.75rem}
+.page-index .idx-blog-card-excerpt{font-size:.8125rem;color:rgba(255,255,255,.35);line-height:1.7;font-weight:400;flex:1;margin-bottom:1.25rem}
+.page-index .idx-blog-card-link{font-size:.8125rem;font-weight:500;color:rgba(255,255,255,.4);transition:color .2s;margin-top:auto}
+.page-index .idx-blog-card-arrow{display:inline-block;transition:transform .2s}
+.page-index .idx-blog-card:hover .idx-blog-card-link{color:#fff}
+.page-index .idx-blog-card:hover .idx-blog-card-arrow{transform:translateX(3px)}
+
+@media(max-width:768px){
+  .page-index .idx-blog-promo-cards{grid-template-columns:1fr}
+  .page-index .idx-blog-promo-header{flex-direction:column;align-items:flex-start}
+}
+
 /* ══════════════════════════════════════════════════
    SERVICES PAGE — page-specific styles
    ══════════════════════════════════════════════════ */
