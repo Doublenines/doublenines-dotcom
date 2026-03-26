@@ -29,7 +29,8 @@ var DN = (function () {
   var PRODUCTS = [
     { name: 'Fuerza Talent', desc: 'AI-ready talent for product teams', href: 'https://fuerza.work', external: true },
     { name: 'Fuerza Agents', desc: 'Intelligent agents for your stack', href: 'products/fuerza-agents.html', beta: true },
-    { name: 'Fuerza Chat', desc: 'Multi-POV AI chat with experts', href: 'products/fuerza-chat.html', beta: true }
+    { name: 'Fuerza Chat', desc: 'Multi-POV AI chat with experts', href: 'products/fuerza-chat.html', beta: true },
+    { name: 'Fuerza Analysis', desc: 'Video quality control and scoring', href: 'products/fuerza-analysis.html', beta: true }
   ];
 
   var FOOTER_COMPANY = [
