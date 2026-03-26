@@ -26,6 +26,7 @@ web/
   products/                  # Product pages
     fuerza-agents.html
     fuerza-chat.html
+    fuerza-analysis.html
   blog/                      # Blog section (6 posts + index)
     index.html               # Blog overview with card grid
     fuerza-chat-launch.html  # March 20, 2026
