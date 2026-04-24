@@ -1,0 +1,693 @@
+RyderGyde AI Planning
+19-Dec-2025
+1
+
+Focusing on 1-3 for This Presentation
+Assignment & Work Done
+Prioritizing Use Cases
+Phased Use Cases & Implementation
+The Azure AI Environment
+Technical builds and additions
+Staffing
+Technology Deep Dive (Appendix)
+Current to Future State
+Description of roles and Functions
+QA/Refinement Processes
+Azure Utilization
+2
+
+4 Week Product and Technology Strategy Assignment
+Initial ask:
+Review of RyderGyde use cases and development of new ones
+Recommendations for AI releases in H1 and H2 2026 and beyond
+Technical requirements and staffing for AI releases
+3
+Additional Concerns and areas to explore:
+Competitive rather than catch up with the market
+Build versus buy
+Recommendations on AI QA and ongoing refinement
+
+
+Completed Analysis of Documents and Interviews
+Interviews/Meetings
+Andrei Vassilliev
+Deepak Kumar
+Sarah Young
+Mitch McHenry
+Jose Ferretti
+Thomas Chey
+Rochak Tarika
+Todd Ewing
+Mayda Domenech
+Steve Goodwin
+99s RyderGyde team
+Review of internal and competitive documents: 
+TASD
+Penske public materials
+Internal AI strategy
+Telematics
+PAB findings
+
+4
+Help Center & AI Assistant POC
+Enabling customers to answer any question.   
+
+Focus on content development, and technical approach through Q4.
+Help Center
+
+Use Case Priorities are Shaped by Triangulating User Value against Market and Technology Constraints
+
+User Value
+Technology & Data Constraints
+Market & 
+Competitive 
+Conditions
+Typically, product strategies are based on use cases and their value to end-users.  Every RyderGyde use case has resource, technology, data, and ownership constraints that must be considered as well..  
+Additionally, competitive market conditions and user expectations around AI impact priorities and planning.  
+Our recommendations are based on the need to provide value, take early action, and adapt to these constraints.  
+The richest source of data, particularly for high value use cases, is in Snowflake and accessed through GraphQL.  We will need new integrations to access this data directly.
+
+Read-only data includes facts about vehicles (with latency and ownership challenges).  Help center content, ready in Q2, is also read-only. 
+5
+Phased Planning
+
+Framework for Prioritizing Use Cases & Features
+A spreadsheet with a complete list of use cases, scores, and commentary is provided as a separate document. 
+
+
+
+Value to Customer 
+
+Three segments:  
+Driver
+Fleet Managers
+Senior people overseeing Fleet Managers
+
+Future segmentation should be include fleet size where fleet and geographic coverage, where users have different needs. 
+
+
+
+
+Data Readiness
+
+Includes accuracy, time lags, ease of access, and performance times.  Ownership of data and APIs and challenges of coordinating across ownership silos is also a significant constraint.     
+
+
+
+Competitive Impact
+
+Penske is well out front in offering and marketing.  RyderGyde's AI for everybody, competes indirectly with Penske. (The Penske competitive gap analysis will not be complete by the end of this project.)
+
+
+
+
+Level of Effort
+
+In addition to absolute levels, there are organizational barriers impacting timing and resources to account for.    
+6
+
+Readiness:  Ready-Only Data promises quick start
+Accuracy
+Outside of the shop systems, data is believed to be largely accurate, but none of data sources have been QAed for AI uses yet.  
+Data Latency
+The syncing of data varies between systems and group needs.  Variances arise from human batching of data entry in the shop, timing of batch updates across systems, etc. 
+Completeness of Data
+Variance in completeness of data is primarily due to telematics level where vehicles can be on different systems and flags can be turned on or off based on contract terms.  Telematics coverage is very high for the largest customers. 
+Performance
+Some APIs and software components are not designed for or owned by RyderGyde.  Performance levels of tools needed to access data poses obstacles to the timing of their use.   
+Ownership
+Custom APIs and some 3rd party components are owned by other groups, creating  dependencies for changes in access or timing. Authorization concerns are being addressed.  
+A spreadsheet with scoring data sources for readiness is included
+7
+
+Focus on the Assistive and Guarded Actions Initially
+CATEGORY
+DESCRIPTION
+CHARACTERISTICS
+EXAMPLES
+RISK 
+TARGET TIMING
+Assistive (Read-Only)
+Conversational access to existing data with no system actions
+No write operations; low blast radius; easy to QA and audit
+Vehicle status; Maintenance summaries; Reporting; Analytics
+Low
+H1-2026
+Guarded Actions (Human in-the- Loop)
+AI suggests actions that require explicit user approval, or make directional recommendationS
+Reversible actions; clear confirmation; ABAC enforced
+Schedule service appointments; Data upload validation; Parameterized reports
+Med
+H2-2026 (Conditional)
+Autonomous (Always on Agentic)
+AI plans and executes actions independently
+Long-lived state; retry / compensation logic; high governance needs
+Vehicle pre-securing; Autonomous dispatch; Auto-rescheduling
+High
+2027+
+8
+
+Starting with Geolocation Telematics based on Priorities
+Implications for phasing:
+
+In the early "AI for everybody" stages, telematics-based use cases should be limited to odometer and location readings to avoid missing information and misleading conclusions. 
+Ryder could more quickly provide robust telematics AI for larger customers with fully-equipped fleets.  These use cases add value for highest LTV customers and could upsell smaller fleets on telematics enablement.  
+Robust use of telematics beyond odometer and location readings, are phased for 2027, but start in H2-2026.  
+
+Different Fleet Support for levels of Telematics Engagement
+
+Initial focus on Location and Odometer due to internal constraints
+9
+
+We will develop a chat platform and underlying AI processes for RyderGyde that leverages the best current capabilities of Azure AI and the Ryder Azure Platform.
+
+After the foundational architecture is developed, we will integrate existing data and knowledge sources quickly. 
+
+In parallel, we will develop new data and knowledge sources via direct integrations for the Azure AI platform to enable all use cases.
+Recommending an Azure AI based Chat Platform
+10
+
+11
+ 
+Help Center
+Curated content with product line information, how-tos, FAQ, training, and more.
+ 
+AI Assistant
+Conversational tool that ties together many sources for intuitive, proactive guidance.
+ 
+RyderGyde Data
+Fleet-specific account data accessed via RyderGyde.
+ 
+Insights
+AI-powered recommendations.
+Defining what Azure AI Services we can Leverage
+
+Using the latest Microsoft Azure AI Platform and Capabilities
+We will leverage many of the latest technologies and capabilities of the Azure AI platform
+
+Our Creation, Management and Deployment of Agents will happen with Microsoft Foundry (formerly Azure AI Foundry) 
+
+Azure has greatly improved its AI capabilities and tools this year
+
+Microsoft Foundry empowers non-technical teammates to adjust and optimize AI Models, Agents, Guardrails, and Language Services 
+Outside of Foundry and the existing tools we will leverage, such as Azure Search AI, our biggest software development challenge is in the development and release of new MCP servers to provide direct access to data.
+
+These MCP Servers will feed into the AI Gateway within Foundry for RyderGyde (and other FMS future projects)
+12
+
+Foundry provides multiple ways to manage and create different 
+
+Agents
+Agentic workflows
+Fine tuned Models
+Evaluations
+Guardrails
+These are all features and capabilities we would previously have to develop on our own.  
+13
+Foundry Provides Many Data Integrations we need in the Ecosystem
+
+Azure Provides Many Data Integrations In Their Ecosystem
+14
+
+Azure Platform Architecture Overview
+15
+
+Plan begins with a foundation and builds increasingly robust and complex use cases over time
+Phase
+Description
+Notes
+Timing and AI scope
+0
+Foundation
+Creation/setup of basic components in Azure Foundry to support conversational AI, ML analytics, and agentic AI:  AI gateway, orchestration layer, etc.  
+Establish reusable UI components for conversational AI.  
+Q1
+Foundation
+I
+Retrieval of vehicle facts and help docs
+Vehicle documents, "Where's my truck?", PM and threshold reminders from odometer and GPS are possible for early 2026. Help Center documents could be Q1, but Q2 is more likely.  
+Q1 - Q2 2026
+Read only
+II
+To-Dos & Threshold Alerts
+Closely related to retrieval of facts, involving little AI, this would be proactive alerts triggered by time, odometer and GPS readings, shop status and traffic. Actions coming from this kind of AI are highly brittle and unforgiving of error, therefore alerts only.  
+H2-2026. with prep work in H1
+Guarded action possible  
+III
+Diagnostics
+Higher value use cases involve vehicle and fleet data, providing recommendations on utilization and rent, lease, buy decisions.  Automated actions are not advised for these use case, but recommendations and advisories would be useful to customers.  
+H2-2026 and 2027.
+Guarded action.  Foundational work supports use cases below. 
+IV
+Benchmarks, Trends, Predictive
+Highest value use cases, directly competitive with Penske.  Requires generation of benchmarks, trend baselines, customer cohorts and behavior patterns.  Use cases highlight trends and insights with accompanying directional recommendations. 
+2027, stretch for H2 2026  
+Guarded action
+Autonomous Agentic AI possible
+16
+
+17
+Phase 0 focuses on foundation and read-only use cases addressing known customer pain points
+
+Phase I – Retrieval of Vehicle and Help Data 
+(Q1 2026)
+Use Cases and Work
+Notes
+Q1-2026
+Use cases to retrieve Vehicle Documents, odometer readings, and PM alerts (9 Total Supported User Stories)
+New code based on current POC structure.  
+Risk:  managing hallucinations, first time doing AI QA  
+Q1-2026
+
+"Where's my truck?", vehicle visibility. 
+Leverage GPS, lay groundwork for longer-term integration with shop/service data. 
+Q1-2026
+Help Content Document Search
+Potentially dependent on Document360 implementation
+Risks:  Higher level of training and QA needed  
+Q1-2026
+Prep data and models for Q2 efforts
+Parallel path to implementation (Grey items on timeline)
+18
+
+Phase II – Q2 2026(stretch cases shaded red)
+Use Case
+Notes
+Q2-2026
+Driver To-Do List
+Primarily PM planning and document collection.  
+Shop statuses are not reliable. 
+Q2-2026
+Roadside Case submission
+Dependent on Salesforce integration and revised workflow with call center. 
+H1-2026
+Fleet Utilization – Basic
+Basic level presents existing report functionality. 
+Potential to automate the addition of recommendations.  
+H1-2026
+Fleet Manager To Do List
+High value to FMs so they can plan their week or month.  
+Low AI risk as this is mostly triggered by dates and vehicle thresholds.  
+Lays groundwork for higher value use cases. 
+H1-2026
+Allotted miles
+High value feature starting with basic threshold reporting (on tires, filters, etc.).
+Can evolve to cost analyses and custom prevention warnings. 
+H1-2026
+Vehicle Health
+Requires data analysis to determine threshold that trigger warnings.  
+Provides high value through simple use of fault code combinations.  
+19
+
+Phase III – H2 2026(stretch cases shaded red)
+Use Case
+Notes
+H2-2026
+Shop Status, Invoice, Billing Data
+Bigger stretch.  Involves data with accuracy and visibility problems (shop status), and time lag (invoice, billing, shop). 
+H2-2026
+Enhanced FM To-Do
+Adds to H1 release, and includes billing, invoicing, and slightly time-lagged shop work and roadside statuses.  Affords advance planning and cost management.  
+H2-2026
+Enhanced/Agentic Running Hot
+Continues to alert drivers and FMs of problems with vehicles not starting, and goes farther to offer to secure a vehicle for use instead.  (This can be combined with PM triggers.  
+H2-2026
+
+Utilization Recommendations
+Enhances Utilization Level reports with benchmark-driven recommendations for more robust help in the sizing and composition of fleet, as well as use levels.  
+H2-2026
+Advanced Utilization Recommendation and Analysis
+Extends the recommendations to include estimated cost savings for sizing, rent/buy/lease, decisions and changes to vehicles.  
+20
+
+Phase IV – 2027(stretch cases shaded red)
+Use Case
+Notes
+H1-2027
+Benchmarked / Personalized Maintenance 
+Recommendation
+Tells fleet managers how well their PM is working compared to comparable fleets and how their own fleet patterns fluctuate and can be improved.  Recommendations for reducing costs and cost savings estimates are possible.  
+H1-2027
+
+Driver Cost & Performance
+Vehicle Cost & Performance
+Metrics associated with drivers and vehicles can be highlighted with recommendations for ways of improving vehicle wear and tear, fuel costs, and down time. 
+H1-2027
+
+Benchmarked and Personalized Fleet Recommendations
+Reports that compare a customer’s fleet metrics to benchmarks from Ryder (overall, by industry, composition, and region) and with analysis and recommendations for patterns detected in the customer’s operations YoY.  
+H1-2027
+Advanced Fleet Recommendations
+Includes improvements from benchmarking and feedback loops.  Adds route optimization (or recommendations) and geographic route and vehicles usage issues.  
+21
+
+Key tech builds by phase
+Phase 0
+Phase 1
+Phase II
+Phase III
+Phase IV
+Standing up Azure Foundry environment and components for conversational AI, ML analytics, and agentic AI
+
+Includes setting up  AI gateway, orchestration layer, agents for routing, frontend chat component
+
+Data prep and models for odometer, GPS, vehicle docs, and help content
+Golden test cases and answer patterns for QA
+Observability Layer
+Working conversation layer for help and vehicle mileage
+Data preparation - shop, billing, invoicing, fleet utilization, fault code data, vehicle documents (incl. Sharepoint aggregation and Snowflake)
+Training and tuning of models -  for new use cases, validation of output from models.
+Foundation Expansion -  action schemas, write-intent orchestration, ABAC, retries, rollback, and compensation logic
+Agent Runtime & State - workflows, persistence, human in the loop checkpoint, escalation paths 
+Data Preparation - to align remaining sources, or account for gaps in AI results.
+Agentic Observability, QA & Governance  - full audit trail, action-level telemetry, error tracking, agent testing, etc.
+Benchmarking Layer - cohorts, metrics, confidence scoring, bias controls.
+Feature Store & Analytics Foundation - trend analysis, freshness guarantees, lineage and versioning for auditability.
+Recommendation & Decision Engine - ranked and scored recommendations, cost impact estimates
+Explainability, QA & Governance  - for benchmarking and recommendations. Regression and bias testing, full audit trail. 
+NB: Foundational elements of Phase 0 will be built/setup in Q1 and refined throughout the initiative
+22
+
+Summary of Use Case Phasing 2026 – H1-2027
+Use Case
+Q1-2026
+Vehicle Documents, odometer, and PM alerts (9 Total Supported User Stories)
+Q1-2026
+"Where's my truck?", vehicle visibility. 
+Q1-2026
+Help Content Document Search
+Q2-2026
+Driver To-Do List
+Q2-2026
+Roadside Case submission
+Q2-2026
+Fleet Utilization – Basic
+Q2-2026
+Fleet Manager To Do List
+Q2-2026
+Allotted miles
+Q2-2026
+Vehicle Health
+H2-2026
+Shop Status, Invoice, BIlling Data
+H2-2026
+Enhanced FM To-Do
+H2-2026
+Enhanced/Agentic Running Hot
+H2-2026
+Utilization Recommendations
+H2-2026
+Advanced Utilization Recommendation and Analysis
+H1-2027
+Benchmarked / Personalized Maintenance Recommendation
+H1-2027
+Driver & Vehicle Cost & Performance
+H1-2027
+Benchmarked and Personalized Fleet Recommendations
+H1-2027
+Advanced Fleet Recommendations
+See separate timeline for estimated durations, completion months, and predecessors. 
+23
+
+24
+
+Q1-Q2 - Phases 0, I, II
+Q3-Q4  - Phases III, IV + 
+1.0
+Product Owner - Jared
+1.0
+Product Owner - Jared
+1.0
+Project/Product Management 
+1.0
+Project/Product Management
+0.5
+Business Analyst - Kip
+1.0
+AI Business Analyst - New Hire
+1.0
+AI Engineering Tech Lead - Acacio
+1.0
+AI Engineering Tech Lead - Acacio
+1.5
+Backend / ML Engineer
+1.5
+Backend / ML Engineer
+1.0
+Full Stack / Frontend Engineer
+0.5
+Full Stack / Frontend Engineer
+0.25
+QA Automation Engineer
+0.25
+QA Automation Engineer
+0.25
+DevOps / SRE Engineer
+0.25
+DevOps / SRE Engineer
+2026 Timelines are based on a 4.0 FTE Dev team
+We recommend phasing in the AI Business / Product Analyst role until we reach Phase 2, or in Phase 1, so that the initial build team can create the platform and tools for this resource to use.
+25
+
+The 99s team has completed the research and analysis, and developed a prioritized list of features for the RyderGyde AI Product Roadmap through 2027
+The recommendation to leverage Azure AI services including Microsoft Foundry follows the Ryder AI COE’s direction of service providers
+The team has provided a schedule against resource recommendations for Q1&Q2
+Recap
+26
+
+Appendix
+Technology Planning
+27
+
+Future-State Architecture & Delivery Plan
+Guiding Principles
+Read-only first Initial AI capabilities will be informational and assistive, not action-triggering.
+Leverage existing RyderGyde architecture The AI layer will consume existing APIs, caches, and integrations through a controlled orchestration layer (MCP).
+Centralized orchestration, not point integrations AI and UI must not directly integrate with backend systems independently.
+Security, ABAC, and compliance are non-negotiable AI must inherit RyderGyde’s identity and authorization model.
+Observability and QA are first-class concerns AI behavior must be measurable, auditable, and improvable.
+28
+
+Future-State Architecture & Delivery Plan
+Future-State Architecture OverviewThe future-state architecture introduces five new logical layers, without disrupting existing RyderGyde services.
+AI Experience LayerThe customer-facing interface embedded in RyderGyde that enables conversational, read-only access to system insights without exposing backend complexity.
+AI GatewayThe control plane that orchestrates AI interactions by managing prompts, retrieval workflows, tool calls, and model execution while enforcing performance, safety, and cost guardrails.
+MCP Orchestration Layer (Master Control Program)The centralized domain orchestration layer that aggregates data from RyderGyde and enterprise systems, enforces security and authorization policies, applies caching and performance controls, and exposes AI- and UI-ready APIs.
+Retrieval Layer (Vector + Traditional Search)The semantic and keyword search layer that indexes approved operational data and documents to provide accurate, contextual grounding for AI responses.
+Central Observability & QA LayerThe cross-cutting monitoring and validation layer that captures end-to-end telemetry, evaluates AI behavior and retrieval quality, supports auditability, and enables continuous improvement through feedback loops.
+29
+
+Future-State Architecture & Delivery Plan
+AI-Enabled RyderGyde: Layered Architecture Overview
+Objective:
+Introduce AI into RyderGyde safely, incrementally, and at scale without disrupting existing systems.
+Approach:
+A layered architecture that separates:
+Customer experience
+AI control & safety
+Backend orchestration
+Data grounding
+Quality, security, and observability
+30
+
+Current State Architecture
+31
+
+32
+Future State Architecture
+
+Future Solution Diagram
+
+Sequence Diagram (Read-Only AI Use Case)
+Example: “What’s the current status of my vehicle and upcoming maintenance?”
+User asks question in RyderGyde UI
+UI calls AI Gateway with user token
+AI Gateway:
+Calls MCP for structured context
+Calls Azure AI Search for documents
+MCP:
+Validates Attribute-Based Access Control
+Reads Redis/Cosmos
+Falls back to APIs if needed
+AI Gateway:
+Assembles prompt
+Calls Azure OpenAI
+Response returned to UI
+Telemetry logged to Observability layer
+33
+
+Future-State Architecture & Delivery Plan
+AI Experience Layer
+Primary Azure Services
+Azure App Service / Static Web Apps
+Azure Front Door (optional)
+Okta / Azure AD integration
+Application Insights (client telemetry)
+What It Does
+Embedded chat experience in RyderGyde
+Conversational, read-only access to insights
+No direct backend access
+Why This Layer Exists
+Enables customers to interact with complex operational data conversationally, without changing existing workflows or exposing backend complexity.
+34
+
+Future-State Architecture & Delivery Plan
+AI Gateway
+Primary Azure Services
+Azure Container Apps (or AKS)
+Azure OpenAI Service
+Azure API Management (optional)
+Azure Key Vault
+Application Insights
+What It Does
+Orchestrates prompts and retrieval
+Manages tool/function calls
+Controls model usage, latency, and cost
+Prevents uncontrolled backend access
+Why This Layer Exists
+Centralizes AI usage to ensure safety, cost control, performance, and consistent behavior across all AI interactions.
+35
+
+Future-State Architecture & Delivery Plan
+MCP Orchestration Layer (Model Context Protocol)
+Primary Azure Services
+Azure Container Apps
+Azure API Management
+Azure Redis Cache
+Azure Cosmos DB
+Azure Functions
+Azure Service Bus (as needed)
+What It Does
+Aggregates data across RyderGyde systems
+Enforces ABAC and security policies
+Applies caching, throttling, and fallbacks
+Exposes AI- and UI-ready domain APIs
+Why This Layer Exists
+Acts as the single, trusted integration layer that protects backend systems, ensures consistent answers, and enables AI and UI to scale safely.
+36
+
+Future-State Architecture & Delivery Plan
+Retrieval Layer (Vector + Traditional Search)
+Primary Azure Services
+Azure AI Search (vector + keyword)
+Azure OpenAI Embeddings
+Azure Blob Storage
+Azure Data Factory / Logic Apps
+What It Does
+Indexes approved operational data and documents
+Supports semantic and keyword search
+Grounds AI responses in real Ryder data
+Why This Layer Exists
+Reduces hallucinations and ensures AI responses are accurate, explainable, and based on trusted sources.
+37
+
+Future-State Architecture & Delivery Plan
+Central Observability & QA Layer
+Primary Azure Services
+Azure Monitor
+Application Insights
+Log Analytics
+Azure Managed Grafana
+Azure DevOps / GitHub Actions
+What It Does
+End-to-end tracing (UI → AI → MCP → backend)
+AI behavior and retrieval quality monitoring
+Cost, latency (p95), and drift tracking
+Auditability and compliance support
+Why This Layer Exists
+Makes AI behavior visible, measurable, and improvable — ensuring trust, compliance, and long-term quality.
+38
+
+Core Technical Roles (Build the Architecture)
+Solution / Platform Architect (50–75%)
+Why this role exists
+Owns future-state architecture decisions
+Prevents fragmentation between UI, AI, and backend
+Defines MCP boundaries, data contracts, and guardrails
+Key responsibilities
+Architecture design & evolution
+Tradeoff decisions (performance, security, cost)
+Alignment with existing RyderGyde systems
+
+Backend EngineerMCP / Orchestration Engineer (100%)
+Why this role exists
+MCP is the backbone — without it, AI and UI diverge
+Key responsibilities
+Build MCP APIs
+Implement ABAC and policy enforcement
+Aggregate data from Redis, Cosmos, SOLR, APIs
+Enforce read-only guarantees
+
+39
+
+AI & Data Roles (Enable Intelligence Safely)
+Backend EngineerAI Engineer (RAG / LLM) (100%)
+Why this role exists
+Turns architecture into a real AI experience
+Key responsibilities
+RAG pipeline design
+Prompt orchestration
+Tool calling via MCP
+Latency, cost, and grounding optimization
+AI observability integration
+Search / Data Engineer (50%)
+Why this role exists
+Retrieval quality determines AI quality
+Key responsibilities
+Azure AI Search configuration
+Vector + keyword retrieval strategies
+Indexing pipelines
+Metadata and filtering strategy
+
+40
+
+Platform, Quality, and Product Roles
+Cloud & Integration EngineerDevOps Engineer (50%)
+Why this role exists
+Ensures reliability and scalability from day one
+Key responsibilities
+Azure infrastructure
+APIM, networking, identity
+CI/CD and environment setup
+Performance tuning
+Search / Data Engineer (50%)
+Why this role exists
+Retrieval quality determines AI quality
+Key responsibilities
+Azure AI Search configuration
+Vector + keyword retrieval strategies
+Indexing pipelines
+Metadata and filtering strategy
+
+Product Owner – AI (25–50%)
+Why this role exists
+Prevents “AI for everybody” from diluting value
+Key responsibilities
+Prioritize high-value, read-only use cases
+Define success metrics
+Own rollout and adoption strategy
+Act as business feedback loop
+41
+
+Appendix
+About Azure OpenAI and Microsoft Foundry
+42
+
+MSFT Foundry
+Azure OpenAI is continually deploying new features and capabilities that our architecture will be able to leverage quickly.
+To the right you can see the latest benchmarking of available Models via Azure OpenAI
+Appendix
+43
+
+Interchangeable Access to all major models
+We will initially focus on Azure OpenAI, but can also bring in other best-in-class models as needed for different agentic applications - or build and host our own.
+To the right you can see the latest benchmarking of available Models via Azure OpenAI
+Appendix
+44
+
+Guardrails
+Controls against multiple types of risk, managed and developed by Azure, but able to be customized as needed.
+Appendix
+45
+
+End of file
