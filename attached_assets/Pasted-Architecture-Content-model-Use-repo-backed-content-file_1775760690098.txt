@@ -1,0 +1,233 @@
+Architecture
+Content model
+
+Use repo-backed content files.
+
+/content
+  /posts
+    2026-04-09-my-post.md
+    2026-04-10-another-post.md
+  /authors
+    joe.json
+  /settings
+    site.json
+
+Each post:
+
+---
+title: "Post title"
+description: "One sentence meta description"
+date: 2026-04-09
+updated: 2026-04-09
+slug: "post-title"
+tags:
+  - seo
+  - static-sites
+author: "joe"
+draft: false
+canonical: ""
+ogImage: "/assets/og/post-title.jpg"
+---
+
+Markdown body here.
+Output routes
+/blog/
+/blog/page/2/
+/blog/post-title/
+/tag/seo/
+/tag/static-sites/
+/rss.xml
+/sitemap.xml
+/admin/
+Rendering rule
+
+All primary content must be present in generated HTML at build time. JS should only enhance UX, never inject the main article body.
+
+That preserves the SEO advantages you already have.
+
+Folder structure
+/
+  .eleventy.js
+  package.json
+  /src
+    /_includes
+      layouts/
+        base.njk
+        post.njk
+      partials/
+        head.njk
+        header.njk
+        footer.njk
+        post-card.njk
+        breadcrumbs.njk
+        jsonld-article.njk
+    /blog
+      index.njk
+      tags.njk
+      post.njk
+    /content
+      /posts
+      /authors
+      /settings
+    /assets
+      /css
+      /js
+      /img
+    /admin
+      config.yml
+      index.html
+Codex implementation plan
+Phase 1: bootstrap
+Initialize Node project.
+Install Eleventy.
+Create src structure.
+Configure passthrough copies for assets and admin.
+Set output dir to _site.
+Packages
+
+Core:
+
+@11ty/eleventy
+
+Useful:
+
+@11ty/eleventy-plugin-rss
+@quasibit/eleventy-plugin-sitemap
+luxon for date formatting
+optional markdown plugins if desired
+Phase 2: content pipeline
+
+Create a posts collection from /src/content/posts/*.md.
+
+Eleventy collections and data cascade are what make this elegant: front matter, directory data, layout data, and computed data can all compose cleanly.
+
+Implementation requirements:
+
+sort posts by date descending
+exclude draft: true in production
+compute permalink from slug
+expose previous/next posts
+expose related posts by shared tags
+Phase 3: templates
+base.njk
+
+Shared shell:
+
+lang
+charset
+viewport
+title
+meta description
+canonical
+OG/Twitter tags
+preload key assets if justified
+header/footer
+post.njk
+
+Per-post page:
+
+H1
+publish/update dates
+author
+article body
+tag links
+related posts
+breadcrumbs
+Article JSON-LD
+blog/index.njk
+
+Paginated blog archive using Eleventy pagination over the posts collection. Eleventy supports paginating arrays or collections directly.
+
+tags.njk
+
+Generate tag archive pages.
+
+SEO requirements for Codex to implement
+Per page
+unique <title>
+unique <meta name="description">
+canonical URL
+one H1
+semantic article structure
+internal links to category/tag/archive/related posts
+Open Graph tags
+Twitter card tags
+JSON-LD Article schema
+breadcrumbs where appropriate
+Sitewide
+sitemap.xml
+rss.xml
+robots.txt
+404 page
+clean permanent URLs
+trailing slash policy enforced consistently
+image width/height attributes to reduce CLS
+Technical rules
+no article body rendered client-side
+no hash-based routing
+no query-string-based canonical content URLs
+no duplicate tag/archive paths
+noindex drafts and staging if exposed
+CMS plan
+
+Use Decap CMS mounted at /admin.
+
+Decap can manage Git-backed content, supports folder collections for repeating content like blog posts, and supports files collections for singleton config content. Editorial workflow can create PRs for unpublished content.
+
+admin/config.yml shape
+
+Use:
+
+one folder collection for posts
+one files collection for site settings
+media folder for images
+public folder for emitted asset paths
+
+Example shape:
+
+backend:
+  name: github
+  repo: your-org/your-repo
+  branch: main
+
+media_folder: "src/assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Updated", name: "updated", widget: "datetime", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "OG Image", name: "ogImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Settings"
+        name: "site"
+        file: "src/content/settings/site.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Site URL", name: "siteUrl", widget: "string" }
+          - { label: "Default Description", name: "defaultDescription", widget: "text" }
+Auth choice
+
+Two simple choices:
+
+GitHub backend if only a few technical editors
+Git Gateway if you want friendlier non-dev editing via Netlify Identity
+
+Decap documents Git Gateway as the proxy layer for authenticated editors without direct repo write access.
