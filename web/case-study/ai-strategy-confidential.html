@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AI Product & Tech Strategy | Double Nines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="../css/style.css?v=2" rel="stylesheet">
+    <link href="../images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo"><img src="../images/wordmark-notm.svg" alt="Double Nines"></a>
+        <div class="nav-links">
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="https://fuerza.work" target="_blank" class="nav-dropdown-item">
+                <div class="nav-dropdown-item-name">Fuerza Talent</div>
+                <div class="nav-dropdown-item-desc">AI-ready talent for product teams</div>
+              </a>
+              <a href="../products/fuerza-agents.html" class="nav-dropdown-item">
+                <div class="nav-dropdown-item-name">Fuerza Agents <span class="beta-pill">Beta</span></div>
+                <div class="nav-dropdown-item-desc">Intelligent agents for your stack</div>
+              </a>
+              <a href="../products/fuerza-chat.html" class="nav-dropdown-item">
+                <div class="nav-dropdown-item-name">Fuerza Chat <span class="beta-pill">Beta</span></div>
+                <div class="nav-dropdown-item-desc">Multi-POV AI chat with experts</div>
+              </a>
+            </div>
+          </div>
+          <a href="../services.html">Services</a>
+        <a href="../work.html">Work</a>
+        <a href="../blog/">Blog</a>
+          <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+          <a href="mailto:hi@doublenines.co" class="nav-cta">Get in touch</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="../index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+    <div class="mobile-menu-label">Products</div>
+      <a href="https://fuerza.work" target="_blank" class="mobile-menu-sub">Fuerza Talent</a>
+      <a href="../products/fuerza-agents.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Agents <span class="beta-pill">Beta</span></a>
+      <a href="../products/fuerza-chat.html" onclick="this.parentElement.classList.remove('open')" class="mobile-menu-sub">Fuerza Chat <span class="beta-pill">Beta</span></a>
+      <a href="../services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
+    <a href="../work.html" onclick="this.parentElement.classList.remove('open')">Work</a>
+    <a href="../blog/" onclick="this.parentElement.classList.remove('open')">Blog</a>
+      <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+      <a href="mailto:hi@doublenines.co">Contact</a>
+    </div>
+
+    <section class="cs-hero container">
+      <div class="cs-hero-label">Enterprise Client (Confidential)</div>
+      <h1>AI Product &amp; Tech Strategy</h1>
+      <p>A focused, AI-native strategy sprint for a large enterprise — turning a wall of ideas into a prioritized, phased roadmap and a platform direction the organization could actually build.</p>
+      <img src="../images/ai-strategy-hero.svg" alt="Abstract gradient mesh" class="cs-hero-img" loading="lazy">
+    </section>
+
+    <section class="section container">
+      <div class="cs-content">
+        <h2>About the work</h2>
+        <p>Our client came to us with a familiar problem: a long backlog of AI ideas, pressure from leadership to move fast, and no shared way to decide what to build, in what order, on what platform. Over a multi-week sprint we ran a structured discovery, scored the use case landscape, and delivered an opinionated strategy the team could execute against — product, technology, and operating model in one document.</p>
+        <p>We started with a deep document review and a wave of stakeholder interviews across product, engineering, data, design, and operations. The goal was to build one shared picture: what users actually do, what data is available and trustworthy, what is already in flight, and where the organization is honestly ready to ship AI in front of customers versus inside the company first.</p>
+        <p>From the discovery we built a single inventory of every AI opportunity that surfaced — across user-facing experiences, internal tooling, and operational workflows — then collapsed duplicates and grouped them into themes. Each opportunity was scored on a consistent rubric instead of left to anecdote.</p>
+        <p>We applied a four-axis prioritization model that has worked well for us across enterprise engagements: <strong>user value</strong>, <strong>data readiness</strong>, <strong>competitive impact</strong>, and <strong>level of effort</strong>. Scores were normalized, plotted, and discussed with stakeholders so trade-offs were explicit. The output is not a ranked list of features — it is an effort-versus-impact map that makes the quick wins, the big bets, and the things to defer obvious to non-technical leaders.</p>
+        <p>Rather than commit the client to a fixed calendar, we recommended a maturity-based phasing model that any AI-driven product can be slotted into. <strong>Phase 1 — Assistive:</strong> read-only retrieval and summarization on top of existing operational data. Low risk, high learning, and an honest forcing function for fixing data plumbing before anything autonomous touches a user. <strong>Phase 2 — Guarded:</strong> suggestions, drafts, and recommended next actions with a human in the loop. The model proposes; a person confirms. Most enterprise AI value lives here for longer than leaders expect. <strong>Phase 3 — Autonomous:</strong> agentic workflows that take action on the user's behalf inside well-defined guardrails, evaluated continuously and reversible by design.</p>
+        <p>The specific bets are always client-specific, but the categories of territory we steer enterprise clients toward early are consistent: <strong>conversational retrieval over operational data</strong> — let frontline users ask plain-language questions of the systems of record they already depend on; <strong>proactive thresholds and alerting</strong> — turn signals already present in the data into nudges that reach the right person at the right time; <strong>benchmark-driven recommendations</strong> — use peer and historical data the organization already owns to suggest a next best action, framed as a recommendation rather than a directive; and <strong>telemetry-based insights, starting low-risk</strong> — begin with descriptive and diagnostic use cases on operational telemetry where being wrong is cheap, then earn the right to predict and prescribe.</p>
+        <p>On the technology side we recommended consolidating onto a single managed enterprise AI platform with first-class support for agent orchestration, retrieval, guardrails, evaluation, and observability — rather than a sprawl of one-off integrations. The shape of the platform matters more than the brand: a clear separation between the experience layer, an orchestration layer, a retrieval and knowledge layer, and the underlying data and policy controls that everything else stands on.</p>
+        <p>For each prioritized territory we made an explicit build, buy, or extend call — anchored on three questions: is this a source of differentiation for the business, is the data we need genuinely proprietary, and is there a credible vendor whose roadmap we trust. Most enterprises over-build at this layer; our default is to buy the platform, integrate aggressively, and reserve internal engineering for the workflows that are actually unique.</p>
+        <p>AI products are not "done" at launch — they are tuned. We recommended an evaluation harness from day one: golden datasets, automated quality checks, structured human review for a sampled slice of production traffic, and a regular cadence for prompt, retrieval, and policy updates. The metric is not raw accuracy; it is whether the assistant gets used, trusted, and improved on. To support all of it, we sketched a lean operating model: a small, senior product and applied-AI core; embedded engineers in the squads that own each territory; a thin platform team accountable for the shared AI substrate; and a lightweight governance forum to keep risk, legal, and security in the loop without becoming a bottleneck.</p>
+
+        <div class="cs-meta">
+          <div class="cs-meta-item"><div class="label">Services</div><div class="value">AI Product Strategy, Tech Strategy, Discovery</div></div>
+        <div class="cs-meta-item"><div class="label">Methods</div><div class="value">Document review, Stakeholder interviews, Use case inventory, Prioritization scoring, Phased roadmap</div></div>
+        <div class="cs-meta-item"><div class="label">Deliverables</div><div class="value">Strategy narrative, Prioritized territories, Phasing model, Platform direction, Build-vs-buy guidance, Operating model</div></div>
+        </div>
+
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="cs-stat-num">6</div><div class="cs-stat-label">Weeks of Engagement</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">20+</div><div class="cs-stat-label">Stakeholder Interviews</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">40+</div><div class="cs-stat-label">Use Cases Evaluated</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">3</div><div class="cs-stat-label">Maturity Phases Recommended</div></div>
+        </div>
+
+        <div class="cs-gallery">
+          <img src="../images/ai-strategy-hero.svg" alt="Abstract gradient mesh" class="cs-gallery-full" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-next container">
+      <a href="../work.html" class="btn-arrow">Back to all work</a>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-callout">Let's build<br>something</div>
+          <div>
+            <div class="footer-heading">Products</div>
+            <div class="footer-links">
+              <a href="https://fuerza.work" target="_blank">Fuerza Talent</a>
+              <a href="../products/fuerza-agents.html">Fuerza Agents <span class="beta-pill">Beta</span></a>
+              <a href="../products/fuerza-chat.html">Fuerza Chat <span class="beta-pill">Beta</span></a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-heading">Company</div>
+            <div class="footer-links">
+              <a href="../index.html">Home</a>
+              <a href="../services.html">Services</a>
+              <a href="../work.html">Work</a>
+              <a href="../blog/">Blog</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-heading">Contact</div>
+            <div class="footer-links">
+              <a href="mailto:hi@doublenines.co">hi@doublenines.co</a>
+              <a href="tel:3013591431">301-359-1431</a>
+              <a href="https://app.fuerza.work/companies/4" target="_blank">Careers</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 All rights reserved</span>
+          <a href="../privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
