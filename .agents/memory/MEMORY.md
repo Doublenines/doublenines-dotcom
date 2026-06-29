@@ -1,0 +1,1 @@
+- [Double Nines positioning](doublenines-positioning.md) — site is a senior AI talent & staffing firm (not a build studio); copy vocabulary + which pages use DN.mount vs hardcoded nav/footer.

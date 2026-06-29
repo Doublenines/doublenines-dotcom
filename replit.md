@@ -1,7 +1,7 @@
 # Double Nines Website
 
 ## Overview
-Static website for Double Nines (doublenines.co), a digital product design and build studio. Rebuilt as a clean, Scale.com-inspired dark-themed site with premium typography and visual effects.
+Static website for Double Nines (doublenines.co), a senior AI talent & staffing firm. The site positions Double Nines as placing senior, AI-fluent talent (digital product development, data analysis, AI development, GTM & marketing, and adjacent roles) into startups and enterprises. Differentiators: senior-only talent, nearshore across the Americas, AI certifications & formal experience. Engagement models: contract, contract-to-hire, full-time placement, and team augmentation. Fuerza products are the productized version of the team/talent; case studies are business solutions delivered by placed teams. Clean, Scale.com-inspired dark-themed site with premium typography and visual effects.
 
 ## Architecture
 - **Server**: Node.js static file server (`server.js`) serving from `./web` on port 5000
