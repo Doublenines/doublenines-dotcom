@@ -577,10 +577,12 @@ img{max-width:100%;height:auto;display:block}
 /* ── IDX FOOTER OVERRIDE (new-design pages only) ── */
 .page-index .footer,
 .page-services .footer,
-.page-product .footer{border-top:1px solid rgba(255,255,255,.06)}
+.page-product .footer,
+.page-roles .footer{border-top:1px solid rgba(255,255,255,.06)}
 .page-index .footer-callout,
 .page-services .footer-callout,
-.page-product .footer-callout{font-family:'Familjen Grotesk',system-ui,sans-serif;font-weight:400}
+.page-product .footer-callout,
+.page-roles .footer-callout{font-family:'Familjen Grotesk',system-ui,sans-serif;font-weight:400}
 
 /* ══════════════════════════════════════════════════
    INDEX PAGE — page-specific overrides
@@ -787,3 +789,36 @@ img{max-width:100%;height:auto;display:block}
 .prod-cta{padding:clamp(5rem,10vh,8rem) 0;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
 .prod-cta-heading{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:1.25rem}
 .prod-cta-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.42);max-width:580px;margin:0 auto 2.25rem}
+
+/* ══════════════════════════════════════════════════
+   SECTION HEADER + OFFERINGS + ROLES (shared)
+   ══════════════════════════════════════════════════ */
+.idx-band{padding:clamp(5rem,10vh,8rem) 0;border-top:1px solid rgba(255,255,255,.06)}
+.idx-section-head{max-width:660px;margin:0 auto clamp(2.5rem,5vh,4rem);text-align:center}
+.idx-section-eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.idx-section-title{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.12;letter-spacing:-.02em;color:#fff;margin-bottom:1rem}
+.idx-section-sub{font-size:1rem;line-height:1.7;color:rgba(255,255,255,.42)}
+
+/* ── Offerings (3-card) ── */
+.idx-offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.5rem)}
+.idx-offer-card{padding:clamp(1.75rem,3vw,2.5rem);border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.015);transition:border-color .25s,background .25s}
+.idx-offer-card:hover{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.03)}
+.idx-offer-num{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:.8rem;font-weight:500;color:rgba(168,85,247,.9);letter-spacing:.04em;margin-bottom:1.25rem}
+.idx-offer-title{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:1.35rem;font-weight:400;color:#fff;letter-spacing:-.01em;margin-bottom:.75rem}
+.idx-offer-desc{font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.42)}
+
+/* ── Roles ── */
+.page-roles{background:#0a0a0a}
+.roles-section{padding:clamp(4rem,8vh,7rem) 0}
+.roles-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(2rem,4vw,3rem) clamp(2.5rem,5vw,5rem)}
+.roles-group{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem}
+.roles-group-title{font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:1.2rem;font-weight:400;color:#fff;letter-spacing:-.01em;margin-bottom:1.25rem}
+.roles-list{display:flex;flex-wrap:wrap;gap:.5rem}
+.roles-pill{display:inline-flex;align-items:center;padding:.4rem .85rem;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);color:rgba(255,255,255,.65);font-size:.8125rem;font-weight:400;transition:border-color .2s,color .2s}
+.roles-pill:hover{border-color:rgba(168,85,247,.4);color:#fff}
+.roles-cta-center{text-align:center;margin-top:clamp(2.5rem,5vh,3.5rem)}
+
+@media(max-width:768px){
+  .idx-offer-grid{grid-template-columns:1fr}
+  .roles-groups{grid-template-columns:1fr}
+}

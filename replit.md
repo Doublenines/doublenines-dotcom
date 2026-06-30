@@ -9,8 +9,8 @@ Static website for Double Nines (doublenines.co), a senior AI talent & staffing 
 - **Component Library**: `web/js/components.js` — shared nav, mobile menu, footer via `DN.mount()` (root) or `DN.mount({ prefix: '../' })` (subpages)
 - **Fonts**: Inter (body, weights 400-800) + Familjen Grotesk (headings, weights 400-700) via Google Fonts
 - **Theme**: Dark (#050505 bg, #f80094 accent pink, #a855f7 accent purple, #8b8b96 muted text)
-- **Design system**: Shared `idx-` prefixed CSS classes for new-design pages (nav, buttons, features, split, FAQ, process, clients bar, page hero). Page-specific overrides scoped under `.page-index`, `.page-services`, `.page-product`. Product pages use `prod-` prefixed classes (prod-hero, prod-pill, prod-intro, prod-cta) with unique hero glows per product (`prod-hero-glow--agents`, `prod-hero-glow--chat`).
-- **CSS version**: `?v=6` — bump on all HTML pages when CSS changes
+- **Design system**: Shared `idx-` prefixed CSS classes for new-design pages (nav, buttons, features, split, FAQ, process, clients bar, page hero). Reusable section helpers: `idx-band` (section spacing + top border), `idx-section-head`/`idx-section-eyebrow`/`idx-section-title`/`idx-section-sub` (centered section intro), `idx-offer-grid`/`idx-offer-card` (3-card offerings), `roles-groups`/`roles-group`/`roles-pill` (grouped role lists). Page-specific overrides scoped under `.page-index`, `.page-services`, `.page-product`, `.page-roles`. Product pages use `prod-` prefixed classes (prod-hero, prod-pill, prod-intro, prod-cta) with unique hero glows per product (`prod-hero-glow--agents`, `prod-hero-glow--chat`).
+- **CSS version**: `?v=7` — bump on all HTML pages when CSS changes
 
 ## File Structure
 ```
@@ -20,6 +20,7 @@ web/
   css/style.css              # Shared stylesheet (all pages)
   index.html                 # Homepage (uses DN.mount())
   services.html              # Services page (Scale.com-inspired layout)
+  roles.html                 # Roles We Place page (grouped role lists)
   work.html                  # Work/portfolio page
   404.html                   # 404 error page
   privacy-policy.html        # Privacy policy

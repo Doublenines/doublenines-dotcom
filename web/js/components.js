@@ -21,6 +21,7 @@
 var DN = (function () {
   var NAV_LINKS = [
     { label: 'Services', href: 'services.html' },
+    { label: 'Roles', href: 'roles.html' },
     { label: 'Work', href: 'work.html' },
     { label: 'Blog', href: 'blog/' },
     { label: 'Careers', href: 'https://app.fuerza.work/companies/4', external: true }
@@ -36,6 +37,7 @@ var DN = (function () {
   var FOOTER_COMPANY = [
     { label: 'Home', href: 'index.html' },
     { label: 'Services', href: 'services.html' },
+    { label: 'Roles', href: 'roles.html' },
     { label: 'Work', href: 'work.html' },
     { label: 'Blog', href: 'blog/' }
   ];
@@ -175,7 +177,7 @@ var DN = (function () {
       '<link rel="preconnect" href="https://fonts.googleapis.com">' +
       '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
       '<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">' +
-      '<link href="' + resolve('css/style.css?v=6', prefix) + '" rel="stylesheet">' +
+      '<link href="' + resolve('css/style.css?v=7', prefix) + '" rel="stylesheet">' +
       '<link href="' + resolve('images/favicon.svg', prefix) + '" rel="shortcut icon" type="image/x-icon">';
   }
 
