@@ -21,6 +21,7 @@
 var DN = (function () {
   var NAV_LINKS = [
     { label: 'Services', href: 'services.html' },
+    { label: 'Roles', href: 'roles.html' },
     { label: 'Work', href: 'work.html' },
     { label: 'Blog', href: 'blog/' },
     { label: 'Careers', href: 'https://app.fuerza.work/companies/4', external: true }
@@ -36,6 +37,7 @@ var DN = (function () {
   var FOOTER_COMPANY = [
     { label: 'Home', href: 'index.html' },
     { label: 'Services', href: 'services.html' },
+    { label: 'Roles', href: 'roles.html' },
     { label: 'Work', href: 'work.html' },
     { label: 'Blog', href: 'blog/' }
   ];
@@ -85,8 +87,7 @@ var DN = (function () {
           links +
         '</div>' +
         '<div class="idx-nav-right">' +
-          '<a href="mailto:hi@doublenines.co" class="idx-nav-link">Get in touch</a>' +
-          '<a href="mailto:hi@doublenines.co" class="idx-nav-cta">Log In</a>' +
+          '<a href="mailto:hi@doublenines.co" class="idx-nav-cta">Hire talent</a>' +
         '</div>' +
         '<button class="nav-hamburger" aria-label="Open menu" onclick="document.querySelector(\'.mobile-menu\').classList.toggle(\'open\')">' +
           '<span></span><span></span><span></span>' +
@@ -138,9 +139,9 @@ var DN = (function () {
     return '<footer class="footer">' +
       '<div class="container">' +
         '<div class="footer-top">' +
-          '<div class="footer-callout">Let\'s build<br>something</div>' +
+          '<div class="footer-callout">Hire senior<br>AI talent</div>' +
           '<div>' +
-            '<div class="footer-heading">Products</div>' +
+            '<div class="footer-heading">Talent Platform</div>' +
             '<div class="footer-links">' + productLinks + '</div>' +
           '</div>' +
           '<div>' +
@@ -176,7 +177,7 @@ var DN = (function () {
       '<link rel="preconnect" href="https://fonts.googleapis.com">' +
       '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
       '<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">' +
-      '<link href="' + resolve('css/style.css?v=6', prefix) + '" rel="stylesheet">' +
+      '<link href="' + resolve('css/style.css?v=7', prefix) + '" rel="stylesheet">' +
       '<link href="' + resolve('images/favicon.svg', prefix) + '" rel="shortcut icon" type="image/x-icon">';
   }
 
